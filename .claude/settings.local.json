@@ -3,7 +3,10 @@
     "allow": [
       "mcp__Claude_Preview__preview_start",
       "Bash(netlify --version)",
-      "Bash(\"/c/Users/vipul/AppData/Roaming/npm/netlify.cmd\" --version)"
+      "Bash(\"/c/Users/vipul/AppData/Roaming/npm/netlify.cmd\" --version)",
+      "Bash(netlify login:*)",
+      "Bash(start \"https://app.netlify.com/authorize?response_type=ticket&ticket=7bb458a5b218aac6ce47e909ecc848f4\")",
+      "Bash(netlify status:*)"
     ]
   }
 }

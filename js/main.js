@@ -1,5 +1,6 @@
 /* ============================================
    WAYMARK LAB — Main JavaScript
+   Civic Precision Design System
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -57,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0.08, rootMargin: '0px 0px -32px 0px' });
 
     fadeElements.forEach(function (el) { observer.observe(el); });
   } else {
@@ -71,8 +72,8 @@ document.addEventListener('DOMContentLoaded', function () {
     contactForm.addEventListener('submit', function (e) {
       const btn = contactForm.querySelector('button[type="submit"]');
       if (btn) {
-        btn.textContent = 'Sending…';
-        btn.disabled    = true;
+        btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending\u2026';
+        btn.disabled = true;
       }
     });
   }
@@ -88,16 +89,19 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  /* ── Sticky Nav Shadow on Scroll ── */
+  /* ── Sticky Nav Shadow on Scroll (class-based) ── */
   const nav = document.querySelector('.nav');
   if (nav) {
-    window.addEventListener('scroll', function () {
+    function handleNavScroll() {
       if (window.scrollY > 8) {
-        nav.style.boxShadow = '0 4px 16px rgba(0,0,0,0.1)';
+        nav.classList.add('scrolled');
       } else {
-        nav.style.boxShadow = '0 2px 10px rgba(0,0,0,0.06)';
+        nav.classList.remove('scrolled');
       }
-    }, { passive: true });
+    }
+    // Run once on load
+    handleNavScroll();
+    window.addEventListener('scroll', handleNavScroll, { passive: true });
   }
 
 });

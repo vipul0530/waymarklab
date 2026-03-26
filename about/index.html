@@ -3,31 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About | Waymark Lab</title>
-  <meta name="description" content="Waymark Lab was founded by public sector technology veterans with decades of experience building enterprise software for California government agencies." />
-  <meta name="keywords" content="government technology company, public sector software, California govtech, government insiders, public sector veterans" />
+  <title>About | Waymark Lab — Government Technology</title>
+  <meta name="description" content="Waymark Lab was built from the inside out — by people who understand California government and are committed to making it work better for everyone." />
+  <meta name="keywords" content="about Waymark Lab, government technology company, California govtech, public sector software company, government digital transformation" />
 
   <!-- Open Graph -->
   <meta property="og:title"       content="About | Waymark Lab" />
-  <meta property="og:description" content="Founded by public sector technology veterans with decades of experience inside California government agencies." />
+  <meta property="og:description" content="Built from the inside out — by people who understand California government." />
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://waymarklab.com/about/" />
   <meta property="og:image"       content="https://waymarklab.com/og-image.png" />
 
-  <!-- Google Analytics 4 — REPLACE WITH GA4 MEASUREMENT ID -->
-  <!--
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About Waymark Lab",
+    "url": "https://waymarklab.com/about/",
+    "description": "About Waymark Lab — government technology built from the inside out",
+    "isPartOf": { "@type": "WebSite", "url": "https://waymarklab.com" }
+  }
   </script>
-  -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="../css/styles.css" />
 </head>
@@ -38,195 +39,235 @@
     <nav class="nav" role="navigation" aria-label="Main navigation">
       <div class="container nav-inner">
         <a href="/" class="nav-logo" aria-label="Waymark Lab home">
-          <div class="nav-logo-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2C8.686 2 6 4.686 6 8c0 4.418 6 12 6 12s6-7.582 6-12c0-3.314-2.686-6-6-6zm0 8.25A2.25 2.25 0 1 1 12 5.75a2.25 2.25 0 0 1 0 4.5z" fill="#2ECC71"/>
-            </svg>
-          </div>
-          <span class="nav-logo-text">Waymark<span>Lab</span></span>
+          <svg class="nav-logo-svg" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="44" height="44" rx="11" fill="#1570EF"/>
+            <path d="M10 15L16.5 29L22 20.5L27.5 29L34 15" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="10" cy="15" r="2.5" fill="#22D3EE"/>
+            <circle cx="34" cy="15" r="2.5" fill="#22D3EE"/>
+          </svg>
+          <span class="nav-wordmark"><strong>Waymark</strong><span>Lab</span></span>
         </a>
-        <div class="nav-links">
-          <a href="/solutions/" class="nav-link">Solutions</a>
-          <a href="/security/"  class="nav-link">Security</a>
-          <a href="/about/"     class="nav-link">About</a>
-          <a href="/contact/"   class="nav-link nav-cta">Contact Us</a>
+
+        <ul class="nav-links" role="list">
+          <li><a href="/solutions/" class="nav-link">Solutions</a></li>
+          <li><a href="/security/"  class="nav-link">Security</a></li>
+          <li><a href="/about/"     class="nav-link">About</a></li>
+          <li><a href="/contact/"   class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-cta">
+          <a href="/contact/" class="btn btn-primary">Get in Touch</a>
         </div>
-        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+
+        <button class="nav-toggle" aria-expanded="false" aria-label="Open navigation menu">
           <span></span><span></span><span></span>
         </button>
       </div>
-      <nav class="nav-mobile" aria-label="Mobile navigation">
+
+      <div class="nav-mobile" role="navigation" aria-label="Mobile navigation">
         <a href="/solutions/" class="nav-mobile-link">Solutions</a>
         <a href="/security/"  class="nav-mobile-link">Security</a>
         <a href="/about/"     class="nav-mobile-link">About</a>
-        <a href="/contact/"   class="nav-mobile-link nav-mobile-cta">Contact Us</a>
-      </nav>
+        <a href="/contact/"   class="nav-mobile-link">Contact</a>
+        <div class="nav-mobile-cta">
+          <a href="/contact/" class="btn btn-primary">Get in Touch</a>
+        </div>
+      </div>
     </nav>
   </header>
 
   <main>
 
     <!-- ── Page Hero ── -->
-    <section class="page-hero" aria-label="About Waymark Lab">
+    <section class="page-hero">
       <div class="container">
-        <div class="page-hero-content">
-          <span class="section-label">About Us</span>
-          <h1>Government Technology Built from the Inside Out</h1>
-          <p>
-            We didn't come to government technology from the outside. We built careers
-            inside government agencies — and we started Waymark Lab because we knew
-            the technology could be better.
-          </p>
+        <p class="page-hero-eyebrow">About Waymark Lab</p>
+        <h1 class="page-hero-title">Built From the Inside Out</h1>
+        <p class="page-hero-desc">
+          Waymark Lab was founded by people who spent careers inside California government —
+          not looking at it from the outside. That perspective shapes everything we build.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── Mission Statement ── -->
+    <section class="section-py" style="background: var(--white);">
+      <div class="container">
+        <div class="mission-block fade-in">
+          <blockquote class="mission-quote">
+            "California's county agencies carry the weight of the most complex social programs
+            in the country. The people who do that work deserve technology that helps them —
+            not technology they have to fight through to do their jobs."
+          </blockquote>
+          <p class="mission-attribution">— Waymark Lab Founding Principle</p>
         </div>
       </div>
     </section>
 
-    <!-- ── Our Team ── -->
-    <section class="section" aria-labelledby="team-heading">
+    <!-- ── Stats ── -->
+    <section class="section-py" style="background: var(--slate-50);">
       <div class="container">
-        <div class="about-intro fade-in">
-          <div>
-            <span class="section-label">Our Team</span>
-            <h2 id="team-heading">Public Sector Veterans. Technology Builders.</h2>
-            <p style="margin-bottom: 20px;">
-              Waymark Lab was founded by public sector technology veterans with decades
-              of combined experience building and managing enterprise software systems
-              for California government agencies.
-            </p>
-            <p style="margin-bottom: 20px;">
-              We understand the constraints, the compliance requirements, and the
-              real-world challenges that government technology teams face — because
-              we have lived them. We've sat in the county offices, navigated the
-              procurement processes, and shipped software that had to work in
-              environments far more demanding than any commercial deployment.
-            </p>
-            <p style="margin-bottom: 32px;">
-              That experience is baked into everything we build. It's why our products
-              integrate with CalSAWS on day one. It's why our security posture is
-              designed around HIPAA and CJIS from the ground up. And it's why county
-              IT teams trust us to handle the data of the citizens they serve.
-            </p>
-            <a href="/contact/" class="btn btn-outline-navy">
-              Work With Us <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-            </a>
-          </div>
-          <div class="about-visual">
-            <div class="about-visual-inner">
-              <div class="about-visual-icon" aria-hidden="true">
-                <i class="fa-solid fa-users-gear"></i>
-              </div>
-              <h3>Founded by Insiders</h3>
-              <p>Decades of combined public sector experience</p>
-              <div class="about-stat-row" aria-label="Team statistics">
-                <div class="about-stat">
-                  <span class="about-stat-val">30<em>+</em></span>
-                  <span class="about-stat-lbl">Years Experience</span>
-                </div>
-                <div class="about-stat">
-                  <span class="about-stat-val">CA<em>.</em></span>
-                  <span class="about-stat-lbl">Focused</span>
-                </div>
-                <div class="about-stat">
-                  <span class="about-stat-val">3<em>+</em></span>
-                  <span class="about-stat-lbl">Products Live</span>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="section-intro centered fade-in" style="margin-bottom: 40px;">
+          <p class="eyebrow">By the Numbers</p>
+          <h2 class="section-title">What We Bring to the Table</h2>
         </div>
-      </div>
-    </section>
-
-    <!-- ── Mission ── -->
-    <section class="section section--gray" aria-labelledby="mission-heading">
-      <div class="container">
-        <div class="section-header section-header--center fade-in">
-          <span class="section-label">Our Mission</span>
-          <h2 id="mission-heading">Why We Built Waymark Lab</h2>
-        </div>
-        <div class="mission-block fade-in" style="max-width: 800px; margin: 0 auto;">
-          <h3>Mission Statement</h3>
-          <p>
-            "To build modern, secure, and practical software that empowers California
-            county government agencies to reduce administrative burden, improve
-            operational efficiency, and deliver better outcomes for the citizens
-            they serve — built by people who have done this work themselves."
-          </p>
+        <div class="about-stats-grid fade-in">
+          <div class="about-stat-item">
+            <div class="about-stat-num">30+</div>
+            <div class="about-stat-label">Years of combined California government experience</div>
+          </div>
+          <div class="about-stat-item">
+            <div class="about-stat-num">3</div>
+            <div class="about-stat-label">Purpose-built solutions in development or deployed</div>
+          </div>
+          <div class="about-stat-item">
+            <div class="about-stat-num">100%</div>
+            <div class="about-stat-label">California-focused — we don't do generic enterprise software</div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- ── Values ── -->
-    <section class="section" aria-labelledby="values-heading">
+    <section class="section-py" style="background: var(--white);">
       <div class="container">
-        <div class="section-header section-header--center fade-in">
-          <span class="section-label">Our Values</span>
-          <h2 id="values-heading">What We Stand For</h2>
-          <p>Four principles guide every product decision, every customer conversation, and every line of code we ship.</p>
+        <div class="section-intro centered fade-in">
+          <p class="eyebrow">Our Values</p>
+          <h2 class="section-title">What We Stand For</h2>
+          <p class="section-desc">
+            These aren't aspirational wall words. They're the principles that drive
+            every product decision we make.
+          </p>
         </div>
+
         <div class="values-grid">
+
           <div class="value-card fade-in fade-in-delay-1">
-            <div class="value-icon" aria-hidden="true">
-              <i class="fa-solid fa-scale-balanced"></i>
+            <div class="value-icon">
+              <i class="fa-solid fa-scale-balanced" aria-hidden="true"></i>
             </div>
-            <h4>Integrity</h4>
-            <p>
-              We tell county partners what will work and what won't. We don't oversell,
-              we don't overpromise, and we don't ship software we don't believe in.
+            <h3 class="value-title">Integrity First</h3>
+            <p class="value-desc">
+              We don't oversell, over-promise, or under-deliver. Government agencies need partners
+              they can trust — and trust is built through honesty about what we can and cannot do.
             </p>
           </div>
+
           <div class="value-card fade-in fade-in-delay-2">
-            <div class="value-icon" aria-hidden="true">
-              <i class="fa-solid fa-lock"></i>
+            <div class="value-icon">
+              <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
             </div>
-            <h4>Security</h4>
-            <p>
-              The data we handle belongs to real people. We treat it that way — with
-              enterprise-grade security, rigorous access controls, and zero tolerance
-              for compromise.
+            <h3 class="value-title">Security Without Compromise</h3>
+            <p class="value-desc">
+              Sensitive citizen data is not negotiable. We build every system as if we are
+              personally responsible for every record it contains — because we believe we are.
             </p>
           </div>
+
           <div class="value-card fade-in fade-in-delay-3">
-            <div class="value-icon" aria-hidden="true">
-              <i class="fa-solid fa-bullseye"></i>
+            <div class="value-icon">
+              <i class="fa-solid fa-bullseye" aria-hidden="true"></i>
             </div>
-            <h4>Impact</h4>
-            <p>
-              We measure success by outcomes for citizens — families kept enrolled in
-              benefits, caseworkers freed from unnecessary administrative work, agencies
-              running more efficiently.
+            <h3 class="value-title">Real Impact</h3>
+            <p class="value-desc">
+              Our measure of success is whether a CalFresh family kept their benefits,
+              or a caseworker finished their day without burning out. Not lines of code or features shipped.
             </p>
           </div>
+
           <div class="value-card fade-in fade-in-delay-4">
-            <div class="value-icon" aria-hidden="true">
-              <i class="fa-solid fa-handshake"></i>
+            <div class="value-icon">
+              <i class="fa-solid fa-handshake" aria-hidden="true"></i>
             </div>
-            <h4>Partnership</h4>
-            <p>
-              We work alongside county agencies as long-term partners, not one-time
-              vendors. Your operational success is our success — we're invested in it
-              for the long haul.
+            <h3 class="value-title">Deep Partnership</h3>
+            <p class="value-desc">
+              We don't sell software and disappear. We embed with county teams, learn the culture,
+              understand the constraints, and stay through the hard parts of implementation.
             </p>
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- ── CTA Banner ── -->
-    <section class="cta-banner" aria-label="Call to action">
+    <!-- ── Our Approach ── -->
+    <section class="section-py" style="background: var(--slate-50);">
       <div class="container">
-        <div class="cta-banner-content fade-in">
-          <h2>Let's Build Something That Works</h2>
-          <p>
-            If you're a California county agency looking for technology that
-            actually fits the way government operates, we'd like to talk.
-          </p>
-          <div class="cta-banner-actions">
-            <a href="/contact/" class="btn btn-primary btn-lg">
-              Get in Touch <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-            </a>
-            <a href="/solutions/" class="btn btn-outline btn-lg">Our Solutions</a>
+        <div class="approach-grid">
+
+          <div class="approach-text">
+            <p class="eyebrow">Our Approach</p>
+            <h2 class="section-title">Government Experience Is Not Optional</h2>
+            <p>
+              There's a long history of technology companies entering the government market with
+              commercial tools and impressive pitch decks — only to underestimate the complexity
+              of public sector operations. Procurement constraints. Legacy system dependencies.
+              Regulatory compliance. Union considerations. Budget cycles. We know all of it.
+            </p>
+            <p>
+              Our founders have worked inside county agencies, inside state-level programs, and
+              alongside the caseworkers who manage California's most critical social safety net
+              programs. We build software informed by that experience — not by assumptions.
+            </p>
+            <p>
+              That means slower, more deliberate product development. More stakeholder engagement.
+              More time understanding the problem before writing a line of code.
+              And better outcomes because of it.
+            </p>
           </div>
+
+          <div class="approach-visual">
+            <div class="approach-badge">
+              <div class="approach-badge-icon blue">
+                <i class="fa-solid fa-people-group" aria-hidden="true"></i>
+              </div>
+              <span class="approach-badge-label">Embedded with county teams</span>
+            </div>
+            <div class="approach-badge">
+              <div class="approach-badge-icon amber">
+                <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+              </div>
+              <span class="approach-badge-label">Deep workflow discovery</span>
+            </div>
+            <div class="approach-badge">
+              <div class="approach-badge-icon green">
+                <i class="fa-solid fa-plug" aria-hidden="true"></i>
+              </div>
+              <span class="approach-badge-label">Legacy system integration</span>
+            </div>
+            <div class="approach-badge">
+              <div class="approach-badge-icon cyan">
+                <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+              </div>
+              <span class="approach-badge-label">Measured by real outcomes</span>
+            </div>
+            <div class="approach-badge">
+              <div class="approach-badge-icon blue">
+                <i class="fa-solid fa-lock" aria-hidden="true"></i>
+              </div>
+              <span class="approach-badge-label">Security from day one</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA ── -->
+    <section class="cta-banner">
+      <div class="container">
+        <p class="cta-banner-eyebrow">Work With Us</p>
+        <h2 class="cta-banner-title">Let's Talk About Your County's Needs</h2>
+        <p class="cta-banner-desc">
+          Whether you're dealing with SAR-7 backlogs, aging software, or a modernization initiative —
+          we'd like to understand your situation.
+        </p>
+        <div class="cta-banner-actions">
+          <a href="/contact/" class="btn btn-white btn-lg">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            Get in Touch
+          </a>
+          <a href="/solutions/" class="btn btn-white-outline btn-lg">View Our Solutions</a>
         </div>
       </div>
     </section>
@@ -238,48 +279,53 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="/" class="footer-logo" aria-label="Waymark Lab home">
-            <div class="footer-logo-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2C8.686 2 6 4.686 6 8c0 4.418 6 12 6 12s6-7.582 6-12c0-3.314-2.686-6-6-6zm0 8.25A2.25 2.25 0 1 1 12 5.75a2.25 2.25 0 0 1 0 4.5z" fill="#2ECC71"/>
-              </svg>
-            </div>
-            <span class="footer-logo-text">WaymarkLab</span>
+          <a href="/" class="footer-brand-logo" aria-label="Waymark Lab">
+            <svg width="36" height="36" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="44" height="44" rx="11" fill="#1570EF"/>
+              <path d="M10 15L16.5 29L22 20.5L27.5 29L34 15" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="10" cy="15" r="2.5" fill="#22D3EE"/>
+              <circle cx="34" cy="15" r="2.5" fill="#22D3EE"/>
+            </svg>
+            <span class="footer-wordmark"><strong>Waymark</strong><span>Lab</span></span>
           </a>
-          <p class="footer-tagline">Modern software applications that improve government operations and better serve the citizens of California.</p>
-          <a href="mailto:info@waymarklab.com" class="footer-email">info@waymarklab.com</a>
+          <p class="footer-brand-desc">
+            Purpose-built government technology for California county agencies.
+            Modern, secure, and designed for the people who serve the public.
+          </p>
+          <p class="footer-brand-email"><a href="mailto:info@waymarklab.com">info@waymarklab.com</a></p>
         </div>
         <div class="footer-col">
-          <h5>Solutions</h5>
-          <div class="footer-links">
-            <a href="/solutions/#continuum" class="footer-link">Continuum</a>
-            <a href="/solutions/#mosaic"    class="footer-link">Mosaic</a>
-            <a href="/solutions/#sentinel"  class="footer-link">Sentinel</a>
-          </div>
+          <h4 class="footer-col-title">Solutions</h4>
+          <ul class="footer-links">
+            <li><a href="/solutions/" class="footer-link">Continuum</a></li>
+            <li><a href="/solutions/" class="footer-link">Mosaic</a></li>
+            <li><a href="/solutions/" class="footer-link">Sentinel</a></li>
+          </ul>
         </div>
         <div class="footer-col">
-          <h5>Company</h5>
-          <div class="footer-links">
-            <a href="/about/"    class="footer-link">About</a>
-            <a href="/security/" class="footer-link">Security</a>
-            <a href="/contact/"  class="footer-link">Contact</a>
-          </div>
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-links">
+            <li><a href="/about/"    class="footer-link">About Us</a></li>
+            <li><a href="/security/" class="footer-link">Security</a></li>
+            <li><a href="/contact/"  class="footer-link">Contact</a></li>
+          </ul>
         </div>
         <div class="footer-col">
-          <h5>Compliance</h5>
-          <div class="footer-links">
-            <a href="/security/" class="footer-link">HIPAA-Aware</a>
-            <a href="/security/" class="footer-link">CJIS-Ready</a>
-            <a href="/security/" class="footer-link">SOC 2 Aligned</a>
-            <a href="/security/" class="footer-link">Azure Gov Cloud</a>
-          </div>
+          <h4 class="footer-col-title">Government</h4>
+          <ul class="footer-links">
+            <li><a href="/security/" class="footer-link">HIPAA Compliance</a></li>
+            <li><a href="/security/" class="footer-link">CJIS Standards</a></li>
+            <li><a href="/security/" class="footer-link">Azure Gov Cloud</a></li>
+            <li><a href="/contact/"  class="footer-link">Procurement</a></li>
+          </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p class="footer-copyright">&copy; 2026 Waymark Lab. All rights reserved.</p>
+        <p class="footer-copy">&copy; 2026 Waymark Lab. All rights reserved. California Government Technology.</p>
         <div class="footer-bottom-links">
           <a href="#" class="footer-bottom-link">Privacy Policy</a>
           <a href="#" class="footer-bottom-link">Terms of Service</a>
+          <a href="#" class="footer-bottom-link">Accessibility</a>
         </div>
       </div>
     </div>

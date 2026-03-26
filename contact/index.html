@@ -3,31 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | Waymark Lab</title>
-  <meta name="description" content="Contact Waymark Lab to schedule a demo or discuss how our government technology solutions can help your California county agency." />
-  <meta name="keywords" content="contact Waymark Lab, government technology demo, California county agency software, govtech contact" />
+  <title>Contact | Waymark Lab — Government Technology</title>
+  <meta name="description" content="Get in touch with Waymark Lab. We work exclusively with California county government agencies — let's talk about your technology needs." />
+  <meta name="keywords" content="contact Waymark Lab, government technology consultation, California govtech, county software demo, government software inquiry" />
 
   <!-- Open Graph -->
   <meta property="og:title"       content="Contact | Waymark Lab" />
-  <meta property="og:description" content="Get in touch to schedule a demo or discuss solutions for your California county agency." />
+  <meta property="og:description" content="Let's talk California government technology. We work exclusively with county agencies." />
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://waymarklab.com/contact/" />
   <meta property="og:image"       content="https://waymarklab.com/og-image.png" />
 
-  <!-- Google Analytics 4 — REPLACE WITH GA4 MEASUREMENT ID -->
-  <!--
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Waymark Lab",
+    "url": "https://waymarklab.com/contact/",
+    "description": "Contact Waymark Lab for California government technology solutions",
+    "isPartOf": { "@type": "WebSite", "url": "https://waymarklab.com" }
+  }
   </script>
-  -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="../css/styles.css" />
 </head>
@@ -38,228 +39,332 @@
     <nav class="nav" role="navigation" aria-label="Main navigation">
       <div class="container nav-inner">
         <a href="/" class="nav-logo" aria-label="Waymark Lab home">
-          <div class="nav-logo-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2C8.686 2 6 4.686 6 8c0 4.418 6 12 6 12s6-7.582 6-12c0-3.314-2.686-6-6-6zm0 8.25A2.25 2.25 0 1 1 12 5.75a2.25 2.25 0 0 1 0 4.5z" fill="#2ECC71"/>
-            </svg>
-          </div>
-          <span class="nav-logo-text">Waymark<span>Lab</span></span>
+          <svg class="nav-logo-svg" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="44" height="44" rx="11" fill="#1570EF"/>
+            <path d="M10 15L16.5 29L22 20.5L27.5 29L34 15" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="10" cy="15" r="2.5" fill="#22D3EE"/>
+            <circle cx="34" cy="15" r="2.5" fill="#22D3EE"/>
+          </svg>
+          <span class="nav-wordmark"><strong>Waymark</strong><span>Lab</span></span>
         </a>
-        <div class="nav-links">
-          <a href="/solutions/" class="nav-link">Solutions</a>
-          <a href="/security/"  class="nav-link">Security</a>
-          <a href="/about/"     class="nav-link">About</a>
-          <a href="/contact/"   class="nav-link nav-cta">Contact Us</a>
+
+        <ul class="nav-links" role="list">
+          <li><a href="/solutions/" class="nav-link">Solutions</a></li>
+          <li><a href="/security/"  class="nav-link">Security</a></li>
+          <li><a href="/about/"     class="nav-link">About</a></li>
+          <li><a href="/contact/"   class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-cta">
+          <a href="/contact/" class="btn btn-primary">Get in Touch</a>
         </div>
-        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+
+        <button class="nav-toggle" aria-expanded="false" aria-label="Open navigation menu">
           <span></span><span></span><span></span>
         </button>
       </div>
-      <nav class="nav-mobile" aria-label="Mobile navigation">
+
+      <div class="nav-mobile" role="navigation" aria-label="Mobile navigation">
         <a href="/solutions/" class="nav-mobile-link">Solutions</a>
         <a href="/security/"  class="nav-mobile-link">Security</a>
         <a href="/about/"     class="nav-mobile-link">About</a>
-        <a href="/contact/"   class="nav-mobile-link nav-mobile-cta">Contact Us</a>
-      </nav>
+        <a href="/contact/"   class="nav-mobile-link">Contact</a>
+        <div class="nav-mobile-cta">
+          <a href="/contact/" class="btn btn-primary">Get in Touch</a>
+        </div>
+      </div>
     </nav>
   </header>
 
   <main>
 
     <!-- ── Page Hero ── -->
-    <section class="page-hero" aria-label="Contact Waymark Lab">
+    <section class="page-hero">
       <div class="container">
-        <div class="page-hero-content">
-          <span class="section-label">Contact Us</span>
-          <h1>Let's Talk About Your Agency's Needs</h1>
-          <p>
-            Whether you want to schedule a demo, discuss a specific operational
-            challenge, or just learn more about what we build — we're glad to hear
-            from you.
-          </p>
-        </div>
+        <p class="page-hero-eyebrow">Contact</p>
+        <h1 class="page-hero-title">Let's Talk Government Technology</h1>
+        <p class="page-hero-desc">
+          We work exclusively with California county government agencies.
+          If that's you — let's find time to talk.
+        </p>
       </div>
     </section>
 
-    <!-- ── Contact Form + Info ── -->
-    <section class="section section--gray" aria-labelledby="contact-heading">
+    <!-- ── Contact Grid ── -->
+    <section class="section-py" style="background: var(--white);">
       <div class="container">
-        <div class="contact-grid fade-in">
+        <div class="contact-grid">
 
-          <!-- Form -->
-          <div class="contact-form">
-            <h2 id="contact-heading">Send Us a Message</h2>
-            <p>We respond to all inquiries from California county and municipal agencies within one business day.</p>
+          <!-- Left: Form -->
+          <div class="fade-in">
+            <div class="contact-form-card">
+              <h2 class="contact-form-title">Send Us a Message</h2>
 
-            <!-- Netlify Form -->
-            <form
-              id="contactForm"
-              name="contact"
-              method="POST"
-              data-netlify="true"
-              netlify-honeypot="bot-field"
-              action="/contact/?success=true"
-              novalidate
-            >
-              <!-- Netlify bot protection -->
-              <input type="hidden" name="form-name" value="contact" />
-              <p style="display:none;">
-                <label>Do not fill this field: <input name="bot-field" /></label>
-              </p>
+              <form
+                id="contactForm"
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                netlify-honeypot="bot-field"
+                action="/contact/?success=true"
+              >
+                <!-- Honeypot field (hidden from humans) -->
+                <p style="display:none;">
+                  <label>Do not fill this out: <input name="bot-field" /></label>
+                </p>
+                <input type="hidden" name="form-name" value="contact" />
 
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="name">Full Name <span aria-hidden="true">*</span></label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Your full name"
-                    required
-                    autocomplete="name"
-                  />
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="firstName">First Name <span aria-label="required" style="color: var(--blue);">*</span></label>
+                    <input
+                      class="form-input"
+                      type="text"
+                      id="firstName"
+                      name="firstName"
+                      required
+                      placeholder="Jane"
+                      autocomplete="given-name"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="lastName">Last Name <span aria-label="required" style="color: var(--blue);">*</span></label>
+                    <input
+                      class="form-input"
+                      type="text"
+                      id="lastName"
+                      name="lastName"
+                      required
+                      placeholder="Smith"
+                      autocomplete="family-name"
+                    />
+                  </div>
                 </div>
+
                 <div class="form-group">
-                  <label for="agency">Agency / County <span aria-hidden="true">*</span></label>
+                  <label class="form-label" for="agency">Agency / Department <span aria-label="required" style="color: var(--blue);">*</span></label>
                   <input
+                    class="form-input"
                     type="text"
                     id="agency"
                     name="agency"
-                    placeholder="e.g. Alameda County HHS"
                     required
+                    placeholder="Riverside County DPSS"
                     autocomplete="organization"
                   />
                 </div>
-              </div>
 
-              <div class="form-group">
-                <label for="email">Work Email <span aria-hidden="true">*</span></label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="you@yourcounty.gov"
-                  required
-                  autocomplete="email"
-                />
-              </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="email">Work Email <span aria-label="required" style="color: var(--blue);">*</span></label>
+                    <input
+                      class="form-input"
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      placeholder="jane.smith@county.gov"
+                      autocomplete="email"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="role">Role / Title</label>
+                    <input
+                      class="form-input"
+                      type="text"
+                      id="role"
+                      name="role"
+                      placeholder="Deputy Director, IT"
+                      autocomplete="organization-title"
+                    />
+                  </div>
+                </div>
 
-              <div class="form-group">
-                <label for="subject">Topic</label>
-                <select id="subject" name="subject">
-                  <option value="" disabled selected>Select a topic…</option>
-                  <option value="demo">Request a product demo</option>
-                  <option value="continuum">Continuum — SAR-7 Outreach</option>
-                  <option value="mosaic">Mosaic — Benefits Navigator</option>
-                  <option value="sentinel">Sentinel — Fraud Detection</option>
-                  <option value="security">Security &amp; compliance questions</option>
-                  <option value="partnership">Partnership inquiry</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
+                <div class="form-group">
+                  <label class="form-label" for="interest">What brings you to Waymark Lab?</label>
+                  <select class="form-select" id="interest" name="interest">
+                    <option value="">Select an option…</option>
+                    <option value="demo">I'd like a product demo</option>
+                    <option value="sar7">SAR-7 / CalFresh administration</option>
+                    <option value="benefits">Benefits administration modernization</option>
+                    <option value="security">Security and compliance questions</option>
+                    <option value="procurement">Procurement / contracting inquiry</option>
+                    <option value="partnership">Partnership or integration inquiry</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
 
-              <div class="form-group">
-                <label for="message">Message <span aria-hidden="true">*</span></label>
-                <textarea
-                  id="message"
-                  name="message"
-                  placeholder="Tell us about your agency and what you're trying to accomplish…"
-                  required
-                ></textarea>
-              </div>
+                <div class="form-group">
+                  <label class="form-label" for="message">Message <span aria-label="required" style="color: var(--blue);">*</span></label>
+                  <textarea
+                    class="form-textarea"
+                    id="message"
+                    name="message"
+                    required
+                    placeholder="Tell us about your situation — what are you trying to solve? What systems are you currently using? What does success look like for your agency?"
+                  ></textarea>
+                </div>
 
-              <div class="form-submit">
                 <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; justify-content: center;">
-                  Send Message <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                  <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                  Send Message
                 </button>
-              </div>
-            </form>
+
+                <p style="margin-top: 14px; font-size: 0.8125rem; color: var(--slate-400); text-align: center;">
+                  We respond to all government agency inquiries within 1 business day.
+                </p>
+              </form>
+            </div>
           </div>
 
-          <!-- Contact Info -->
-          <aside class="contact-info" aria-label="Contact information">
+          <!-- Right: Contact info -->
+          <div class="fade-in fade-in-delay-1">
 
             <div class="contact-info-card">
-              <div class="contact-icon" aria-hidden="true">
-                <i class="fa-solid fa-envelope"></i>
+              <h3 class="contact-info-title">Contact Information</h3>
+              <div class="contact-info-item">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                <div>
+                  <strong style="display:block; margin-bottom:2px; color: var(--slate-700);">Email</strong>
+                  <a href="mailto:info@waymarklab.com" class="contact-email-link">info@waymarklab.com</a>
+                </div>
               </div>
-              <h4>Email</h4>
-              <a href="mailto:info@waymarklab.com">info@waymarklab.com</a>
+              <div class="contact-info-item">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                <div>
+                  <strong style="display:block; margin-bottom:2px; color: var(--slate-700);">Location</strong>
+                  California, USA
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                <div>
+                  <strong style="display:block; margin-bottom:2px; color: var(--slate-700);">Response Time</strong>
+                  Within 1 business day for government agency inquiries
+                </div>
+              </div>
             </div>
 
             <div class="contact-info-card">
-              <div class="contact-icon" aria-hidden="true">
-                <i class="fa-solid fa-map-location-dot"></i>
-              </div>
-              <h4>Service Area</h4>
-              <p>California county and municipal agencies statewide.</p>
-            </div>
-
-            <div class="contact-info-card">
-              <div class="contact-icon" aria-hidden="true">
-                <i class="fa-solid fa-clock"></i>
-              </div>
-              <h4>Response Time</h4>
-              <p>We respond to all agency inquiries within one business day.</p>
-            </div>
-
-            <div class="contact-notice" role="note" aria-label="Service scope notice">
-              <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
-              <p>
-                We work exclusively with California county and municipal agencies.
-                We are not able to respond to inquiries from vendors, recruiters,
-                or out-of-state organizations at this time.
+              <h3 class="contact-info-title">
+                <i class="fa-solid fa-circle-info" aria-hidden="true" style="color: var(--blue); margin-right: 8px;"></i>
+                California Counties Only
+              </h3>
+              <p style="font-size: 0.9rem; color: var(--slate-500); line-height: 1.65;">
+                Waymark Lab works exclusively with California county government agencies.
+                We don't serve commercial clients, federal agencies, or non-California governments.
+              </p>
+              <p style="font-size: 0.9rem; color: var(--slate-500); line-height: 1.65; margin-top: 12px;">
+                If you're a California county administrator, IT director, department head,
+                or procurement officer — we want to hear from you.
               </p>
             </div>
 
-          </aside>
+            <div class="contact-info-card" style="background: var(--blue-50); border-color: var(--blue-200);">
+              <h3 class="contact-info-title" style="color: var(--blue);">
+                <i class="fa-solid fa-calendar-check" aria-hidden="true" style="margin-right: 8px;"></i>
+                Prefer a Demo First?
+              </h3>
+              <p style="font-size: 0.9rem; color: var(--slate-600); line-height: 1.65;">
+                We're happy to show you Continuum in action before any formal conversation.
+                Just mention "demo" in your message and we'll set up a live walkthrough
+                tailored to your county's workflows.
+              </p>
+            </div>
+
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ── Why Agencies Work With Us ── -->
-    <section class="section" aria-labelledby="why-contact-heading">
+    <!-- ── FAQ ── -->
+    <section class="section-py" style="background: var(--slate-50);">
       <div class="container">
-        <div class="section-header section-header--center fade-in">
-          <span class="section-label">What to Expect</span>
-          <h2 id="why-contact-heading">A Conversation, Not a Sales Pitch</h2>
-          <p>When you reach out to Waymark Lab, you'll talk directly with people who understand government operations — not a sales team reading from a script.</p>
+        <div class="section-intro centered fade-in">
+          <p class="eyebrow">Quick Answers</p>
+          <h2 class="section-title">Common Questions</h2>
+          <p class="section-desc">
+            Things government agencies typically ask us before our first conversation.
+          </p>
         </div>
-        <div class="pillars-grid">
-          <div class="pillar-card fade-in fade-in-delay-1">
-            <div class="pillar-icon" aria-hidden="true">
-              <i class="fa-solid fa-comments"></i>
-            </div>
-            <h3>Honest Conversations</h3>
-            <p>
-              We'll ask about your actual operational challenges before we talk about
-              our products. If we're not the right fit, we'll tell you — because our
-              reputation in California county government matters more than any
-              individual deal.
+
+        <div class="faq-list fade-in" style="max-width: 720px; margin: 0 auto;">
+
+          <div class="faq-item">
+            <p class="faq-question">What counties do you work with?</p>
+            <p class="faq-answer">
+              We serve all 58 California counties. Our service area is California-only,
+              and we focus exclusively on county-level government agencies.
+              If you're a California county, we'd love to talk.
             </p>
           </div>
-          <div class="pillar-card fade-in fade-in-delay-2">
-            <div class="pillar-icon" aria-hidden="true">
-              <i class="fa-solid fa-display"></i>
-            </div>
-            <h3>Tailored Demos</h3>
-            <p>
-              If a demo makes sense, we'll configure it around your county's
-              environment and workflows — not a generic slide deck. You'll see exactly
-              how the product would work for your agency.
+
+          <div class="faq-item">
+            <p class="faq-question">How long does implementation take?</p>
+            <p class="faq-answer">
+              Implementation timelines vary based on the complexity of your existing systems and
+              the scope of integration. Continuum implementations typically range from 8 to 20 weeks,
+              including discovery, integration, training, and go-live. We'll give you a realistic
+              estimate after understanding your environment.
             </p>
           </div>
-          <div class="pillar-card fade-in fade-in-delay-3">
-            <div class="pillar-icon" aria-hidden="true">
-              <i class="fa-solid fa-file-contract"></i>
-            </div>
-            <h3>Clear Next Steps</h3>
-            <p>
-              We respect the procurement and IT approval processes county agencies
-              work within. We'll provide whatever documentation your team needs to
-              move forward at the pace that works for your organization.
+
+          <div class="faq-item">
+            <p class="faq-question">Is there a demo available?</p>
+            <p class="faq-answer">
+              Yes — and we strongly encourage it. We'll walk you through a live Continuum demo
+              tailored to your county's SAR-7 workflows. Just mention "demo" in your message
+              and we'll schedule it within a few days.
             </p>
           </div>
+
+          <div class="faq-item">
+            <p class="faq-question">How does Continuum integrate with LEADER / C-IV / CalSAWS?</p>
+            <p class="faq-answer">
+              Continuum is designed to integrate with California's eligibility systems via APIs
+              and secure file exchange protocols. We've mapped the integration patterns for
+              LEADER, C-IV, and CalSAWS and can discuss your specific instance configuration
+              during a technical call.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <p class="faq-question">What does pricing look like?</p>
+            <p class="faq-answer">
+              Our pricing model is tailored to county size, scope of deployment, and integration
+              complexity — we don't publish generic pricing because no two county implementations
+              are alike. Contact us and we'll develop a clear, itemized proposal.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <p class="faq-question">Do you support county IT security reviews?</p>
+            <p class="faq-answer">
+              Absolutely. We welcome security reviews, architecture walkthroughs, and compliance
+              documentation requests. Our team is prepared to work through your county's IT security
+              process, including vendor risk assessments and data use agreements.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA ── -->
+    <section class="cta-banner">
+      <div class="container">
+        <p class="cta-banner-eyebrow">Ready When You Are</p>
+        <h2 class="cta-banner-title">Your County Deserves Better Technology</h2>
+        <p class="cta-banner-desc">
+          Whether you're ready to move or just exploring options — we're a straightforward
+          conversation away.
+        </p>
+        <div class="cta-banner-actions">
+          <a href="mailto:info@waymarklab.com" class="btn btn-white btn-lg">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            Email Directly
+          </a>
+          <a href="/solutions/" class="btn btn-white-outline btn-lg">View Solutions First</a>
         </div>
       </div>
     </section>
@@ -271,48 +376,53 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="/" class="footer-logo" aria-label="Waymark Lab home">
-            <div class="footer-logo-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2C8.686 2 6 4.686 6 8c0 4.418 6 12 6 12s6-7.582 6-12c0-3.314-2.686-6-6-6zm0 8.25A2.25 2.25 0 1 1 12 5.75a2.25 2.25 0 0 1 0 4.5z" fill="#2ECC71"/>
-              </svg>
-            </div>
-            <span class="footer-logo-text">WaymarkLab</span>
+          <a href="/" class="footer-brand-logo" aria-label="Waymark Lab">
+            <svg width="36" height="36" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="44" height="44" rx="11" fill="#1570EF"/>
+              <path d="M10 15L16.5 29L22 20.5L27.5 29L34 15" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="10" cy="15" r="2.5" fill="#22D3EE"/>
+              <circle cx="34" cy="15" r="2.5" fill="#22D3EE"/>
+            </svg>
+            <span class="footer-wordmark"><strong>Waymark</strong><span>Lab</span></span>
           </a>
-          <p class="footer-tagline">Modern software applications that improve government operations and better serve the citizens of California.</p>
-          <a href="mailto:info@waymarklab.com" class="footer-email">info@waymarklab.com</a>
+          <p class="footer-brand-desc">
+            Purpose-built government technology for California county agencies.
+            Modern, secure, and designed for the people who serve the public.
+          </p>
+          <p class="footer-brand-email"><a href="mailto:info@waymarklab.com">info@waymarklab.com</a></p>
         </div>
         <div class="footer-col">
-          <h5>Solutions</h5>
-          <div class="footer-links">
-            <a href="/solutions/#continuum" class="footer-link">Continuum</a>
-            <a href="/solutions/#mosaic"    class="footer-link">Mosaic</a>
-            <a href="/solutions/#sentinel"  class="footer-link">Sentinel</a>
-          </div>
+          <h4 class="footer-col-title">Solutions</h4>
+          <ul class="footer-links">
+            <li><a href="/solutions/" class="footer-link">Continuum</a></li>
+            <li><a href="/solutions/" class="footer-link">Mosaic</a></li>
+            <li><a href="/solutions/" class="footer-link">Sentinel</a></li>
+          </ul>
         </div>
         <div class="footer-col">
-          <h5>Company</h5>
-          <div class="footer-links">
-            <a href="/about/"    class="footer-link">About</a>
-            <a href="/security/" class="footer-link">Security</a>
-            <a href="/contact/"  class="footer-link">Contact</a>
-          </div>
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-links">
+            <li><a href="/about/"    class="footer-link">About Us</a></li>
+            <li><a href="/security/" class="footer-link">Security</a></li>
+            <li><a href="/contact/"  class="footer-link">Contact</a></li>
+          </ul>
         </div>
         <div class="footer-col">
-          <h5>Compliance</h5>
-          <div class="footer-links">
-            <a href="/security/" class="footer-link">HIPAA-Aware</a>
-            <a href="/security/" class="footer-link">CJIS-Ready</a>
-            <a href="/security/" class="footer-link">SOC 2 Aligned</a>
-            <a href="/security/" class="footer-link">Azure Gov Cloud</a>
-          </div>
+          <h4 class="footer-col-title">Government</h4>
+          <ul class="footer-links">
+            <li><a href="/security/" class="footer-link">HIPAA Compliance</a></li>
+            <li><a href="/security/" class="footer-link">CJIS Standards</a></li>
+            <li><a href="/security/" class="footer-link">Azure Gov Cloud</a></li>
+            <li><a href="/contact/"  class="footer-link">Procurement</a></li>
+          </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p class="footer-copyright">&copy; 2026 Waymark Lab. All rights reserved.</p>
+        <p class="footer-copy">&copy; 2026 Waymark Lab. All rights reserved. California Government Technology.</p>
         <div class="footer-bottom-links">
           <a href="#" class="footer-bottom-link">Privacy Policy</a>
           <a href="#" class="footer-bottom-link">Terms of Service</a>
+          <a href="#" class="footer-bottom-link">Accessibility</a>
         </div>
       </div>
     </div>

@@ -3,31 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Solutions | Waymark Lab</title>
-  <meta name="description" content="Waymark Lab's purpose-built software solutions for California county government — Continuum, Mosaic, and Sentinel." />
-  <meta name="keywords" content="government software solutions, SAR-7 automation, CalFresh outreach, benefits eligibility, fraud detection, county government technology" />
+  <title>Solutions | Waymark Lab — Government Technology</title>
+  <meta name="description" content="Explore Waymark Lab's suite of purpose-built government technology solutions for California counties — including Continuum, Mosaic, and Sentinel." />
+  <meta name="keywords" content="government software solutions, CalFresh SAR-7, benefits administration software, county government technology, California govtech" />
 
   <!-- Open Graph -->
   <meta property="og:title"       content="Solutions | Waymark Lab" />
-  <meta property="og:description" content="Purpose-built software solutions for California county government agencies." />
+  <meta property="og:description" content="Purpose-built software solutions for California county government operations." />
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://waymarklab.com/solutions/" />
   <meta property="og:image"       content="https://waymarklab.com/og-image.png" />
 
-  <!-- Google Analytics 4 — REPLACE WITH GA4 MEASUREMENT ID -->
-  <!--
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Solutions",
+    "url": "https://waymarklab.com/solutions/",
+    "description": "Government technology solutions for California county agencies",
+    "isPartOf": { "@type": "WebSite", "url": "https://waymarklab.com" }
+  }
   </script>
-  -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="../css/styles.css" />
 </head>
@@ -38,175 +39,287 @@
     <nav class="nav" role="navigation" aria-label="Main navigation">
       <div class="container nav-inner">
         <a href="/" class="nav-logo" aria-label="Waymark Lab home">
-          <div class="nav-logo-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2C8.686 2 6 4.686 6 8c0 4.418 6 12 6 12s6-7.582 6-12c0-3.314-2.686-6-6-6zm0 8.25A2.25 2.25 0 1 1 12 5.75a2.25 2.25 0 0 1 0 4.5z" fill="#2ECC71"/>
-            </svg>
-          </div>
-          <span class="nav-logo-text">Waymark<span>Lab</span></span>
+          <svg class="nav-logo-svg" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="44" height="44" rx="11" fill="#1570EF"/>
+            <path d="M10 15L16.5 29L22 20.5L27.5 29L34 15" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="10" cy="15" r="2.5" fill="#22D3EE"/>
+            <circle cx="34" cy="15" r="2.5" fill="#22D3EE"/>
+          </svg>
+          <span class="nav-wordmark"><strong>Waymark</strong><span>Lab</span></span>
         </a>
-        <div class="nav-links">
-          <a href="/solutions/" class="nav-link">Solutions</a>
-          <a href="/security/"  class="nav-link">Security</a>
-          <a href="/about/"     class="nav-link">About</a>
-          <a href="/contact/"   class="nav-link nav-cta">Contact Us</a>
+
+        <ul class="nav-links" role="list">
+          <li><a href="/solutions/" class="nav-link">Solutions</a></li>
+          <li><a href="/security/" class="nav-link">Security</a></li>
+          <li><a href="/about/"    class="nav-link">About</a></li>
+          <li><a href="/contact/"  class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-cta">
+          <a href="/contact/" class="btn btn-primary">Get in Touch</a>
         </div>
-        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+
+        <button class="nav-toggle" aria-expanded="false" aria-label="Open navigation menu">
           <span></span><span></span><span></span>
         </button>
       </div>
-      <nav class="nav-mobile" aria-label="Mobile navigation">
+
+      <div class="nav-mobile" role="navigation" aria-label="Mobile navigation">
         <a href="/solutions/" class="nav-mobile-link">Solutions</a>
         <a href="/security/"  class="nav-mobile-link">Security</a>
         <a href="/about/"     class="nav-mobile-link">About</a>
-        <a href="/contact/"   class="nav-mobile-link nav-mobile-cta">Contact Us</a>
-      </nav>
+        <a href="/contact/"   class="nav-mobile-link">Contact</a>
+        <div class="nav-mobile-cta">
+          <a href="/contact/" class="btn btn-primary">Get in Touch</a>
+        </div>
+      </div>
     </nav>
   </header>
 
   <main>
 
     <!-- ── Page Hero ── -->
-    <section class="page-hero" aria-label="Solutions overview">
+    <section class="page-hero">
       <div class="container">
-        <div class="page-hero-content">
-          <span class="section-label">Our Solutions</span>
-          <h1>Software Built for the Way Government Works</h1>
-          <p>
-            Every Waymark Lab product is designed around the real operational constraints
-            of California county agencies — not around how we wish government worked.
+        <p class="page-hero-eyebrow">Solutions</p>
+        <h1 class="page-hero-title">Purpose-Built for California Government</h1>
+        <p class="page-hero-desc">
+          Every product in our suite starts with a real problem facing California county agencies
+          and builds toward a solution that works inside the constraints of public sector operations.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── Featured: Continuum ── -->
+    <section class="section-py" style="background: var(--white);">
+      <div class="container">
+        <div class="section-intro fade-in">
+          <p class="eyebrow">Flagship Platform</p>
+          <h2 class="section-title">Continuum</h2>
+          <p class="section-desc">
+            California's SAR-7 Interim Report process reimagined — modern, accessible,
+            and built for the people who depend on it most.
           </p>
+        </div>
+
+        <div class="continuum-card fade-in">
+          <!-- Left panel -->
+          <div class="continuum-left">
+            <p class="continuum-eyebrow">Benefits Administration Platform</p>
+            <h3 class="continuum-name">Continuum</h3>
+            <p class="continuum-tagline">
+              Managing California's CalFresh SAR-7 Interim Report is one of the most
+              administratively intensive tasks in county government. Continuum makes it manageable
+              for caseworkers and accessible for families.
+            </p>
+            <ul class="continuum-features">
+              <li class="continuum-feature">
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                Mobile-first, plain-language SAR-7 form for any device
+              </li>
+              <li class="continuum-feature">
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                Multi-language support with accessibility compliance
+              </li>
+              <li class="continuum-feature">
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                Intelligent deadline tracking with automated reminders
+              </li>
+              <li class="continuum-feature">
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                Document upload with automated validation and routing
+              </li>
+              <li class="continuum-feature">
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                Caseworker queue, dashboard, and case management tools
+              </li>
+              <li class="continuum-feature">
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                Native integration with LEADER, C-IV, and CalSAWS
+              </li>
+              <li class="continuum-feature">
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                HIPAA-aware — hosted on Azure Government Cloud
+              </li>
+            </ul>
+            <a href="/contact/" class="btn btn-white">
+              Request a Demo <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+
+          <!-- Right panel -->
+          <div class="continuum-right">
+            <p class="continuum-right-label">Live Workflow — SAR-7 Process</p>
+            <div class="continuum-graphic">
+              <div class="sar7-visual">
+                <div class="sar7-bar">
+                  <div class="sar7-bar-icon blue"><i class="fa-solid fa-file-lines" aria-hidden="true"></i></div>
+                  <span class="sar7-bar-label">SAR-7 Form Received</span>
+                  <span class="sar7-bar-status complete">Complete</span>
+                </div>
+                <div class="sar7-bar">
+                  <div class="sar7-bar-icon cyan"><i class="fa-solid fa-upload" aria-hidden="true"></i></div>
+                  <span class="sar7-bar-label">Supporting Documents</span>
+                  <span class="sar7-bar-status complete">Uploaded</span>
+                </div>
+                <div class="sar7-bar">
+                  <div class="sar7-bar-icon blue"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></div>
+                  <span class="sar7-bar-label">Caseworker Review</span>
+                  <span class="sar7-bar-status active">In Progress</span>
+                </div>
+                <div class="sar7-bar">
+                  <div class="sar7-bar-icon amber"><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i></div>
+                  <span class="sar7-bar-label">Eligibility Determination</span>
+                  <span class="sar7-bar-status pending">Queued</span>
+                </div>
+                <div class="sar7-bar">
+                  <div class="sar7-bar-icon green"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div>
+                  <span class="sar7-bar-label">Benefits Continued</span>
+                  <span class="sar7-bar-status pending">Pending</span>
+                </div>
+              </div>
+            </div>
+            <div class="continuum-product-name" aria-hidden="true">CTM</div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ── Solutions Grid ── -->
-    <section class="section section--gray" aria-labelledby="solutions-heading">
+    <!-- ── Secondary Solutions ── -->
+    <section class="section-py" style="background: var(--slate-50);">
       <div class="container">
-        <h2 id="solutions-heading" class="sr-only">Product Solutions</h2>
+        <div class="section-intro centered fade-in">
+          <p class="eyebrow">Coming Soon</p>
+          <h2 class="section-title">More Solutions in Development</h2>
+          <p class="section-desc">
+            Continuum is just the beginning. We're building a full suite of government-native
+            applications across multiple departments.
+          </p>
+        </div>
 
         <div class="solutions-grid">
 
-          <!-- Continuum — Featured -->
-          <article class="solution-card solution-card--featured fade-in" id="continuum" aria-labelledby="continuum-heading">
-            <div>
-              <div class="solution-icon" aria-hidden="true">
-                <i class="fa-solid fa-rotate"></i>
-              </div>
-              <h3 id="continuum-heading">Continuum</h3>
-              <div class="solution-subtitle">SAR-7 Outreach Automation</div>
-              <p>
-                Continuum helps county social services agencies keep eligible families
-                enrolled in CalFresh by automating SAR-7 outreach before deadlines are
-                missed. Fewer terminations, less re-enrollment paperwork, and better
-                outcomes for the families your agency serves.
-              </p>
-              <ul class="solution-features" aria-label="Features">
-                <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Automated SMS, email, and mail outreach before SAR-7 deadlines</li>
-                <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Native integration with CalSAWS and BenefitsCal</li>
-                <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Real-time household status dashboard for caseworkers</li>
-                <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Multilingual communication templates</li>
-                <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Full audit log and compliance reporting</li>
-                <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Configurable outreach cadence per county policy</li>
-              </ul>
-              <a href="/contact/" class="btn btn-outline-navy">
-                Request a Demo <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-              </a>
-            </div>
-            <div class="solution-visual">
-              <div class="solution-visual-inner">
-                <div class="solution-visual-icon" aria-hidden="true">
-                  <i class="fa-solid fa-rotate"></i>
-                </div>
-                <h4>Continuum</h4>
-                <p>Keeping eligible families enrolled</p>
-              </div>
-            </div>
-          </article>
-
-          <!-- Mosaic -->
-          <article class="solution-card fade-in fade-in-delay-1" id="mosaic" aria-labelledby="mosaic-heading">
-            <div class="solution-icon" aria-hidden="true">
-              <i class="fa-solid fa-table-cells-large"></i>
-            </div>
-            <h3 id="mosaic-heading">Mosaic</h3>
-            <div class="solution-subtitle">Multi-Program Benefits Navigator</div>
-            <p>
-              Mosaic is a multi-program benefits eligibility navigator built for
-              caseworkers. It surfaces relevant program information, eligibility rules,
-              and cross-program interactions across the full landscape of California
-              public benefits — so caseworkers can serve clients faster and more accurately.
+          <div class="solution-card fade-in fade-in-delay-1">
+            <p class="solution-category">Benefits Navigator</p>
+            <h3 class="solution-name">Mosaic</h3>
+            <p class="solution-desc">
+              A unified benefits discovery and application portal that helps California residents
+              identify and apply for every program they qualify for — in one place.
             </p>
-            <ul class="solution-features" aria-label="Features">
-              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Unified view across CalFresh, Medi-Cal, CalWORKs, and more</li>
-              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Real-time eligibility rule updates as policy changes</li>
-              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Cross-program interaction alerts for caseworkers</li>
-              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Integrates with CalSAWS workflows</li>
-            </ul>
-            <a href="/contact/" class="btn btn-outline-navy">
-              Learn More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-            </a>
-          </article>
+            <span class="badge-coming">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              Coming Q3 2026
+            </span>
+          </div>
 
-          <!-- Sentinel -->
-          <article class="solution-card fade-in fade-in-delay-2" id="sentinel" aria-labelledby="sentinel-heading">
-            <div class="solution-icon" aria-hidden="true">
-              <i class="fa-solid fa-magnifying-glass-chart"></i>
-            </div>
-            <h3 id="sentinel-heading">Sentinel</h3>
-            <div class="solution-subtitle">Fraud &amp; Anomaly Detection</div>
-            <p>
-              Sentinel brings intelligent anomaly detection to public benefits programs.
-              It surfaces unusual patterns in case data — duplicate records, inconsistent
-              household data, suspicious activity — so county fraud investigators can focus
-              their time where it matters most.
+          <div class="solution-card fade-in fade-in-delay-2">
+            <p class="solution-category">Compliance & Audit</p>
+            <h3 class="solution-name">Sentinel</h3>
+            <p class="solution-desc">
+              Continuous compliance monitoring, audit trail management, and security posture
+              reporting for California county IT and compliance teams.
             </p>
-            <ul class="solution-features" aria-label="Features">
-              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Automated anomaly detection across case records</li>
-              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Risk scoring and investigation queue management</li>
-              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Duplicate record identification and flagging</li>
-              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Audit-ready investigation documentation</li>
-            </ul>
-            <a href="/contact/" class="btn btn-outline-navy">
-              Learn More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-            </a>
-          </article>
+            <span class="badge-coming">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              Coming Q4 2026
+            </span>
+          </div>
 
-          <!-- Placeholder -->
-          <article class="solution-card solution-card--placeholder fade-in fade-in-delay-3" aria-labelledby="future-heading">
-            <div class="solution-icon" aria-hidden="true">
-              <i class="fa-solid fa-flask"></i>
+          <div class="solution-card solution-card--placeholder fade-in fade-in-delay-3">
+            <div style="margin-bottom: 16px; color: var(--blue); font-size: 2rem;">
+              <i class="fa-solid fa-plus" aria-hidden="true"></i>
             </div>
-            <h3 id="future-heading">More Solutions in Development</h3>
-            <p>
-              Waymark Lab continuously develops new tools to address government operational
-              challenges across departments and agencies. Stay in touch to hear about
-              what's coming next.
+            <p class="solution-category">More on the Roadmap</p>
+            <h3 class="solution-name" style="font-size: 1.25rem; color: var(--slate-500);">Future Solutions</h3>
+            <p class="solution-desc">
+              We're actively scoping additional platforms for permitting, public works,
+              and law enforcement. Have a pressing need? Tell us.
             </p>
-            <a href="/contact/" class="btn btn-outline-navy" style="margin-top: 8px;">
-              Stay Updated <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            <a href="/contact/" class="btn btn-ghost" style="font-size: 0.875rem; padding: 8px 18px;">
+              Share Your Needs
             </a>
-          </article>
+          </div>
 
         </div>
       </div>
     </section>
 
-    <!-- ── CTA Banner ── -->
-    <section class="cta-banner" aria-label="Call to action">
+    <!-- ── How We Build ── -->
+    <section class="section-py" style="background: var(--white);">
       <div class="container">
-        <div class="cta-banner-content fade-in">
-          <h2>Ready to See a Solution in Action?</h2>
-          <p>
-            Contact us to schedule a demo tailored to your county's specific
-            operational environment.
+        <div class="section-intro centered fade-in">
+          <p class="eyebrow">Our Process</p>
+          <h2 class="section-title">How We Build Government Software</h2>
+          <p class="section-desc">
+            Every solution starts with people — the caseworkers, residents, and administrators
+            who will live inside it every day.
           </p>
-          <div class="cta-banner-actions">
-            <a href="/contact/" class="btn btn-primary btn-lg">
-              Request a Demo <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-            </a>
-            <a href="/security/" class="btn btn-outline btn-lg">View Security</a>
+        </div>
+
+        <div class="process-steps fade-in">
+
+          <div class="process-step">
+            <div class="process-step-num">
+              <i class="fa-solid fa-magnifying-glass process-step-icon" aria-hidden="true"></i>
+            </div>
+            <h3 class="process-step-label">Discover</h3>
+            <p class="process-step-desc">
+              We embed with your team — observing real workflows, interviewing caseworkers,
+              and mapping the actual pain points in your operations.
+            </p>
           </div>
+
+          <div class="process-step">
+            <div class="process-step-num">
+              <i class="fa-solid fa-pen-ruler process-step-icon" aria-hidden="true"></i>
+            </div>
+            <h3 class="process-step-label">Design</h3>
+            <p class="process-step-desc">
+              Co-design with your stakeholders. We build prototypes, test with real users,
+              and validate solutions before writing a single line of production code.
+            </p>
+          </div>
+
+          <div class="process-step">
+            <div class="process-step-num">
+              <i class="fa-solid fa-plug process-step-icon" aria-hidden="true"></i>
+            </div>
+            <h3 class="process-step-label">Integrate</h3>
+            <p class="process-step-desc">
+              We connect with your existing systems — LEADER, C-IV, CalSAWS, and legacy platforms —
+              so your team never has to choose between old and new.
+            </p>
+          </div>
+
+          <div class="process-step">
+            <div class="process-step-num">
+              <i class="fa-solid fa-rocket process-step-icon" aria-hidden="true"></i>
+            </div>
+            <h3 class="process-step-label">Deploy</h3>
+            <p class="process-step-desc">
+              Phased rollout with training, change management, and ongoing support.
+              We stay through go-live and beyond to make sure it sticks.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA ── -->
+    <section class="cta-banner">
+      <div class="container">
+        <p class="cta-banner-eyebrow">Get Started</p>
+        <h2 class="cta-banner-title">See Continuum in Action</h2>
+        <p class="cta-banner-desc">
+          Schedule a live demo tailored to your county's SAR-7 workflows and eligibility operations.
+        </p>
+        <div class="cta-banner-actions">
+          <a href="/contact/" class="btn btn-white btn-lg">
+            <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+            Schedule a Demo
+          </a>
+          <a href="/security/" class="btn btn-white-outline btn-lg">View Security Details</a>
         </div>
       </div>
     </section>
@@ -218,48 +331,53 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="/" class="footer-logo" aria-label="Waymark Lab home">
-            <div class="footer-logo-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2C8.686 2 6 4.686 6 8c0 4.418 6 12 6 12s6-7.582 6-12c0-3.314-2.686-6-6-6zm0 8.25A2.25 2.25 0 1 1 12 5.75a2.25 2.25 0 0 1 0 4.5z" fill="#2ECC71"/>
-              </svg>
-            </div>
-            <span class="footer-logo-text">WaymarkLab</span>
+          <a href="/" class="footer-brand-logo" aria-label="Waymark Lab">
+            <svg width="36" height="36" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="44" height="44" rx="11" fill="#1570EF"/>
+              <path d="M10 15L16.5 29L22 20.5L27.5 29L34 15" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="10" cy="15" r="2.5" fill="#22D3EE"/>
+              <circle cx="34" cy="15" r="2.5" fill="#22D3EE"/>
+            </svg>
+            <span class="footer-wordmark"><strong>Waymark</strong><span>Lab</span></span>
           </a>
-          <p class="footer-tagline">Modern software applications that improve government operations and better serve the citizens of California.</p>
-          <a href="mailto:info@waymarklab.com" class="footer-email">info@waymarklab.com</a>
+          <p class="footer-brand-desc">
+            Purpose-built government technology for California county agencies.
+            Modern, secure, and designed for the people who serve the public.
+          </p>
+          <p class="footer-brand-email"><a href="mailto:info@waymarklab.com">info@waymarklab.com</a></p>
         </div>
         <div class="footer-col">
-          <h5>Solutions</h5>
-          <div class="footer-links">
-            <a href="/solutions/#continuum" class="footer-link">Continuum</a>
-            <a href="/solutions/#mosaic"    class="footer-link">Mosaic</a>
-            <a href="/solutions/#sentinel"  class="footer-link">Sentinel</a>
-          </div>
+          <h4 class="footer-col-title">Solutions</h4>
+          <ul class="footer-links">
+            <li><a href="/solutions/" class="footer-link">Continuum</a></li>
+            <li><a href="/solutions/" class="footer-link">Mosaic</a></li>
+            <li><a href="/solutions/" class="footer-link">Sentinel</a></li>
+          </ul>
         </div>
         <div class="footer-col">
-          <h5>Company</h5>
-          <div class="footer-links">
-            <a href="/about/"    class="footer-link">About</a>
-            <a href="/security/" class="footer-link">Security</a>
-            <a href="/contact/"  class="footer-link">Contact</a>
-          </div>
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-links">
+            <li><a href="/about/"    class="footer-link">About Us</a></li>
+            <li><a href="/security/" class="footer-link">Security</a></li>
+            <li><a href="/contact/"  class="footer-link">Contact</a></li>
+          </ul>
         </div>
         <div class="footer-col">
-          <h5>Compliance</h5>
-          <div class="footer-links">
-            <a href="/security/" class="footer-link">HIPAA-Aware</a>
-            <a href="/security/" class="footer-link">CJIS-Ready</a>
-            <a href="/security/" class="footer-link">SOC 2 Aligned</a>
-            <a href="/security/" class="footer-link">Azure Gov Cloud</a>
-          </div>
+          <h4 class="footer-col-title">Government</h4>
+          <ul class="footer-links">
+            <li><a href="/security/" class="footer-link">HIPAA Compliance</a></li>
+            <li><a href="/security/" class="footer-link">CJIS Standards</a></li>
+            <li><a href="/security/" class="footer-link">Azure Gov Cloud</a></li>
+            <li><a href="/contact/"  class="footer-link">Procurement</a></li>
+          </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p class="footer-copyright">&copy; 2026 Waymark Lab. All rights reserved.</p>
+        <p class="footer-copy">&copy; 2026 Waymark Lab. All rights reserved. California Government Technology.</p>
         <div class="footer-bottom-links">
           <a href="#" class="footer-bottom-link">Privacy Policy</a>
           <a href="#" class="footer-bottom-link">Terms of Service</a>
+          <a href="#" class="footer-bottom-link">Accessibility</a>
         </div>
       </div>
     </div>
