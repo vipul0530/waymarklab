@@ -97,7 +97,19 @@
 
           <!-- Left: Form -->
           <div class="fade-in">
-            <div class="contact-form-card">
+            <!-- Success message (shown after form submission) -->
+            <div id="formSuccess" class="contact-form-card" style="display:none; text-align:center; padding: 48px 32px;">
+              <div style="font-size:3rem; color: var(--blue); margin-bottom:16px;">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <h2 class="contact-form-title" style="margin-bottom:12px;">Message Received</h2>
+              <p style="color: var(--slate-500); font-size:1rem; line-height:1.7;">
+                Thank you for reaching out. We respond to all California county agency
+                inquiries within 1 business day.
+              </p>
+            </div>
+
+            <div id="formWrap" class="contact-form-card">
               <h2 class="contact-form-title">Send Us a Message</h2>
 
               <form
@@ -214,7 +226,7 @@
                   We respond to all government agency inquiries within 1 business day.
                 </p>
               </form>
-            </div>
+            </div><!-- /formWrap -->
           </div>
 
           <!-- Right: Contact info -->
@@ -429,6 +441,6 @@
     </div>
   </footer>
 
-  <script src="../js/main.js"></script>
+  <script src="../js/main.js?v=2"></script>
 </body>
 </html>

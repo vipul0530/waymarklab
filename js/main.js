@@ -78,6 +78,15 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  /* ── Form Success State ── */
+  if (window.location.search.includes('success=true')) {
+    const formSuccess = document.getElementById('formSuccess');
+    const formWrap    = document.getElementById('formWrap');
+    if (formSuccess) formSuccess.style.display = 'block';
+    if (formWrap)    formWrap.style.display    = 'none';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
   /* ── Smooth Scroll for Anchor Links ── */
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {
