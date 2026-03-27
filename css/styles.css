@@ -373,14 +373,15 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px solid var(--slate-200);
   box-shadow: 0 8px 24px rgba(0,0,0,0.08);
   z-index: 999;
-  padding: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 16px 0 24px;
 }
 .nav-mobile.open {
-  max-height: 400px;
-  padding: 16px 0 24px;
+  display: block;
+  animation: navSlideDown 0.22s ease;
+}
+@keyframes navSlideDown {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 .nav-mobile-link {
@@ -1945,7 +1946,6 @@ h1, h2, h3, h4, h5, h6 {
 
   .nav-links, .nav-cta { display: none; }
   .nav-toggle { display: flex; }
-  .nav-mobile { display: block; }
 
   .hero-visual { display: none; }
   .hero-grid { grid-template-columns: 1fr; }
