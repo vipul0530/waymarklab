@@ -281,7 +281,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-logo-svg { flex-shrink: 0; }
-.nav-logo-img { height: 44px; width: auto; display: block; flex-shrink: 0; }
+.nav-logo-img { width: 160px; height: auto; display: block; flex-shrink: 0; }
 
 .nav-wordmark {
   font-family: var(--font-main);
@@ -292,7 +292,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav-wordmark strong { font-weight: 800; color: #1A2F4A; }
 .nav-wordmark span   { font-weight: 600; color: #7A9298; }
 
-.footer-logo-img { height: 34px; width: auto; display: block; }
+.footer-logo-img { width: 160px; height: auto; display: block; }
 
 .nav-links {
   display: flex;
