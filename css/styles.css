@@ -288,8 +288,8 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1;
   letter-spacing: -0.01em;
 }
-.nav-wordmark strong { font-weight: 800; color: var(--slate-700); }
-.nav-wordmark span   { font-weight: 800; color: var(--blue); }
+.nav-wordmark strong { font-weight: 800; color: #1A2F4A; }
+.nav-wordmark span   { font-weight: 600; color: #7A9298; }
 
 .nav-links {
   display: flex;
