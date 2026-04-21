@@ -1,3 +1,23 @@
+[build]
+  publish = "."
+  command = "cd wardrobe && npm install --include=dev 2>/dev/null; true"
+
+[functions]
+  directory    = "wardrobe/netlify/functions"
+  node_bundler = "esbuild"
+
+# ── Wardrobe app routes ────────────────────────────────────────────────────────
+[[redirects]]
+  from   = "/wardrobe"
+  to     = "/wardrobe/index.html"
+  status = 200
+
+[[redirects]]
+  from   = "/wardrobe/"
+  to     = "/wardrobe/index.html"
+  status = 200
+
+# ── Existing site routes ───────────────────────────────────────────────────────
 [[redirects]]
   from = "/solutions"
   to   = "/solutions/index.html"
@@ -17,9 +37,6 @@
   from = "/contact"
   to   = "/contact/index.html"
   status = 200
-
-[build]
-  publish = "."
 
 [[headers]]
   for = "/*"
