@@ -1,0 +1,30 @@
+# Wardrobe Manager — Netlify configuration
+# Deploy this folder as base directory in Netlify:
+#   Repo:             vipul0530/waymarklab
+#   Base directory:   wardrobe
+#   Publish dir:      .
+#   Functions dir:    netlify/functions
+#
+# Required environment variables in Netlify dashboard:
+#   WARDROBE_PASSWORD   — password to protect the app
+#   ANTHROPIC_API_KEY   — from console.anthropic.com
+
+[build]
+  publish = "."
+
+[functions]
+  directory    = "netlify/functions"
+  node_bundler = "esbuild"
+
+# Serve index.html for the root of this deployment
+[[redirects]]
+  from   = "/"
+  to     = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options        = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy        = "strict-origin-when-cross-origin"
