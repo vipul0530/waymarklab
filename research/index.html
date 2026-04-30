@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Research | Waymark Lab</title>
+  <meta name="description" content="Waymark Lab contributes to the public benefits field through open research and infrastructure development alongside its commercial product work." />
+  <meta name="keywords" content="public benefits AI research, synthetic data benefits, SNAP Medicaid TANF research, public benefits technology, open source benefits infrastructure" />
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content="Research | Waymark Lab" />
+  <meta property="og:description" content="Waymark Lab contributes to the public benefits field through open research and infrastructure development alongside its commercial product work." />
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://waymarklab.com/research/" />
+  <meta property="og:image"       content="https://waymarklab.com/og-image.png" />
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Research",
+    "url": "https://waymarklab.com/research/",
+    "description": "Open research and infrastructure development for the public benefits field",
+    "isPartOf": { "@type": "WebSite", "url": "https://waymarklab.com" }
+  }
+  </script>
+
+  <!-- Google Analytics 4 — REPLACE WITH GA4 MEASUREMENT ID -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="../css/styles.css?v=2" />
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <header>
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      <div class="container nav-inner">
+        <a href="/" class="nav-logo" aria-label="Waymark Lab home">
+          <span style="font-size:1.25rem;font-weight:400;color:#1B3A6B;letter-spacing:-0.01em;line-height:1;"><strong style="font-weight:700;">Waymark</strong> Lab</span>
+        </a>
+
+        <ul class="nav-links" role="list">
+          <li><a href="/solutions/" class="nav-link">Solutions</a></li>
+          <li><a href="/research/"  class="nav-link active">Research</a></li>
+          <li><a href="/security/"  class="nav-link">Security</a></li>
+          <li><a href="/about/"     class="nav-link">About</a></li>
+          <li><a href="/contact/"   class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-cta">
+          <a href="/contact/" class="btn btn-primary">Get in Touch</a>
+        </div>
+
+        <button class="nav-toggle" aria-expanded="false" aria-label="Open navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <!-- Mobile menu -->
+      <div class="nav-mobile" role="navigation" aria-label="Mobile navigation">
+        <a href="/solutions/" class="nav-mobile-link">Solutions</a>
+        <a href="/research/"  class="nav-mobile-link active">Research</a>
+        <a href="/security/"  class="nav-mobile-link">Security</a>
+        <a href="/about/"     class="nav-mobile-link">About</a>
+        <a href="/contact/"   class="nav-mobile-link">Contact</a>
+        <div class="nav-mobile-cta">
+          <a href="/contact/" class="btn btn-primary">Get in Touch</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ── Page Hero ── -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="page-hero-eyebrow">OPEN RESEARCH</p>
+        <h1 class="page-hero-title">Building Infrastructure for the Field</h1>
+        <p class="page-hero-desc">
+          Alongside our commercial product work, Waymark Lab contributes to the broader public benefits
+          research community through open infrastructure projects designed to benefit the entire field.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── Featured Project ── -->
+    <section class="section-py" style="background: var(--white);">
+      <div class="container">
+
+        <div class="section-intro fade-in" style="margin-bottom: 40px;">
+          <span style="display:inline-block; background: var(--amber-50); color: var(--amber-dark); font-size:0.75rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding: 6px 14px; border-radius: 20px; border: 1px solid var(--amber); margin-bottom: 20px;">EARLY CONCEPT — PENDING FUNDING</span>
+          <h2 class="section-title">Synthetic Data Infrastructure for the Public Benefits Ecosystem</h2>
+        </div>
+
+        <div class="fade-in" style="max-width: 800px; margin-bottom: 48px;">
+          <p style="font-size:1.0625rem; line-height:1.75; color: var(--slate-600); margin-bottom: 1.25rem;">
+            Meaningful AI research in public benefits delivery requires realistic case data — and that data is largely
+            inaccessible to the research community. Real benefits case data is protected by federal SNAP confidentiality
+            rules, HIPAA-aligned Medicaid privacy requirements, and state privacy laws. As a result, academic teams build
+            AI tools on simplified datasets that fail to generalize in real agencies, and the field lacks shared benchmarks
+            for evaluating AI tools objectively.
+          </p>
+          <p style="font-size:1.0625rem; line-height:1.75; color: var(--slate-600);">
+            This project proposes to build and openly release the foundational layer of a national multi-program synthetic
+            case file generator spanning SNAP, Medicaid, and TANF — with a public extensibility framework allowing the
+            research community to expand coverage over time. Each generated case represents a complete synthetic household
+            with cross-program enrollment modeled for internal consistency. All deliverables released under permissive
+            open licenses.
+          </p>
+        </div>
+
+        <!-- Three feature cards -->
+        <div class="industries-grid fade-in">
+
+          <div class="industry-card industry-card--health">
+            <div class="industry-icon"><i class="fa-solid fa-database" aria-hidden="true"></i></div>
+            <h3 class="industry-name">Multi-Program Coverage</h3>
+            <p class="industry-desc">
+              Native generation for SNAP, Medicaid, and TANF with cross-program household consistency.
+              Extensible framework for community-contributed programs.
+            </p>
+          </div>
+
+          <div class="industry-card industry-card--waste">
+            <div class="industry-icon"><i class="fa-solid fa-shield-alt" aria-hidden="true"></i></div>
+            <h3 class="industry-name">Privacy by Design</h3>
+            <p class="industry-desc">
+              No real client records used at any stage. Calibrated entirely from public federal statistics.
+              Formal re-identification testing and privacy attestation built into the project plan.
+            </p>
+          </div>
+
+          <div class="industry-card industry-card--permits">
+            <div class="industry-icon"><i class="fa-solid fa-code-branch" aria-hidden="true"></i></div>
+            <h3 class="industry-name">Fully Open</h3>
+            <p class="industry-desc">
+              Generator software, extensibility framework, baseline dataset, fidelity methodology, and benchmark
+              suite all released under permissive open licenses.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Why This Matters ── -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="section-intro centered fade-in">
+          <h2 class="section-title" style="color: var(--white);">Why This Matters</h2>
+          <p class="section-desc" style="color: rgba(255,255,255,0.8); max-width: 720px; margin: 0 auto 40px;">
+            Despite serving more than 28 million households on SNAP and over 90 million people on Medicaid,
+            public benefits AI operates on research infrastructure that would be considered inadequate in any
+            adjacent field. Medical AI and financial AI both have well-established public benchmarks and synthetic
+            data initiatives. Public benefits AI does not. This project is designed to change that.
+          </p>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-item fade-in fade-in-delay-1">
+            <div class="stat-bg" aria-hidden="true"></div>
+            <div class="stat-number">28M+</div>
+            <div class="stat-label">Households on SNAP nationally</div>
+          </div>
+          <div class="stat-item fade-in fade-in-delay-2">
+            <div class="stat-bg" aria-hidden="true"></div>
+            <div class="stat-number">90M+</div>
+            <div class="stat-label">People on Medicaid nationally</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA ── -->
+    <section class="cta-banner">
+      <div class="container">
+        <p class="cta-banner-eyebrow">Collaboration</p>
+        <h2 class="cta-banner-title">Interested in This Research?</h2>
+        <p class="cta-banner-desc">
+          We welcome collaboration with researchers, civic technology organizations, and government agencies
+          working on public benefits AI.
+        </p>
+        <div class="cta-banner-actions">
+          <a href="/contact/" class="btn btn-white btn-lg">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            Get in Touch
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="/" class="footer-brand-logo" aria-label="Waymark Lab">
+            <span style="font-size:1.25rem;font-weight:400;color:#1B3A6B;letter-spacing:-0.01em;line-height:1;"><strong style="font-weight:700;">Waymark</strong> Lab</span>
+          </a>
+          <p class="footer-brand-desc">
+            Purpose-built technology for public benefits agencies.
+          </p>
+          <p class="footer-brand-email">
+            <a href="mailto:info@waymarklab.com">info@waymarklab.com</a>
+          </p>
+        </div>
+
+        <!-- Solutions -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Solutions</h4>
+          <ul class="footer-links">
+            <li><a href="/solutions/" class="footer-link">Outreach Tracker</a></li>
+            <li><a href="/solutions/" class="footer-link">Mosaic</a></li>
+            <li><a href="/solutions/" class="footer-link">Sentinel</a></li>
+            <li><a href="/solutions/" class="footer-link">All Solutions</a></li>
+          </ul>
+        </div>
+
+        <!-- Company -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-links">
+            <li><a href="/about/"    class="footer-link">About Us</a></li>
+            <li><a href="/research/" class="footer-link">Research</a></li>
+            <li><a href="/security/" class="footer-link">Security</a></li>
+            <li><a href="/contact/"  class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Programs -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Programs</h4>
+          <ul class="footer-links">
+            <li><a href="/solutions/" class="footer-link">CalFresh &amp; SAR-7</a></li>
+            <li><a href="/solutions/" class="footer-link">Medi-Cal</a></li>
+            <li><a href="/solutions/" class="footer-link">CalWORKs</a></li>
+            <li><a href="/security/"  class="footer-link">HIPAA Compliance</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Waymark Lab. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          <a href="#" class="footer-bottom-link">Terms of Service</a>
+          <a href="#" class="footer-bottom-link">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js?v=2"></script>
+</body>
+</html>
