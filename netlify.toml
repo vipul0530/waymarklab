@@ -17,6 +17,17 @@
   to     = "/wardrobe/index.html"
   status = 200
 
+# ── Trading Bot app routes ────────────────────────────────────────────────────
+[[redirects]]
+  from   = "/tradingbot"
+  to     = "/tradingbot/index.html"
+  status = 200
+
+[[redirects]]
+  from   = "/tradingbot/"
+  to     = "/tradingbot/index.html"
+  status = 200
+
 # ── Existing site routes ───────────────────────────────────────────────────────
 [[redirects]]
   from = "/solutions"
