@@ -911,3 +911,16 @@ tr.has-warning td:first-child { border-left: 3px solid var(--yellow); }
   color: var(--text-muted);
 }
 .passed-list li strong { color: var(--text); }
+
+.api-counter {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 8px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 11px;
+  color: var(--text-muted);
+  font-family: ui-monospace, monospace;
+}
+.parse-status.warn { background: var(--yellow-bg); border: 1px solid var(--yellow-border); color: var(--yellow); }

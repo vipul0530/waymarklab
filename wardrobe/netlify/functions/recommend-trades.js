@@ -75,18 +75,39 @@ PRE-CHECKS THAT MUST PASS:
 - R:R ≥ 3:1 minimum
 
 ═══════════════════════════════════════════════════════════════
+TIMEFRAME RULES — USE THE RIGHT TIMEFRAME PER ZONE ROW
+═══════════════════════════════════════════════════════════════
+
+The user provides multi-timeframe OHLC bars per ticker: { daily, weekly, intraday60, intraday15 }.
+
+You MUST analyze each zone using its proper timeframes:
+- TOP SUPPLY zone or BOTTOM DEMAND zone (passive long-term)
+  → ITF trend from WEEKLY bars · HTF curve from WEEKLY bars · Trigger confirmation from DAILY closes
+- MIDDLE SUPPLY or MIDDLE DEMAND zone (weekly swing)
+  → ITF trend from DAILY bars · HTF curve from DAILY bars · Trigger confirmation from intraday60 closes
+- BOTTOM SUPPLY or TOP DEMAND zone (daily intraday)
+  → ITF trend from intraday60 bars · HTF curve from DAILY bars · Trigger confirmation from intraday15 closes
+
+For each zone evaluation, you must explicitly use bars from the correct timeframe to:
+1. Determine ITF trend (uptrend = higher highs/lows, downtrend = lower highs/lows, sideways = no clear breakout segment)
+2. Compute Strength enhancer (move-out vs base size on the timeframe where the zone formed)
+3. Compute Time enhancer (basing candle count on that timeframe)
+4. Compute Freshness enhancer (has price returned to the zone since formation?)
+5. Compute current dATR and check if price is within 1 dATR of zone proximal
+
+═══════════════════════════════════════════════════════════════
 YOUR ANALYSIS PROCESS
 ═══════════════════════════════════════════════════════════════
 
-For each ticker the user has zones for:
-1. Look at current price vs each of the 6 zones (3 supply + 3 demand)
-2. For each zone, compute distance to proximal as % of price
-3. If distance > 3% → skip (price not close enough yet)
-4. Determine ITF trend from recent OHLC data (uptrend/sideways/downtrend)
-5. Determine HTF curve position from zone row (bottom DZ = low on curve; top SZ = high on curve)
-6. Apply Decision Matrix → LONG/SHORT/NO ACTION
-7. Estimate IV regime from recent volatility (if recent ATR is high vs historical = IV4/5; low = IV1/2; otherwise IV3 → skip)
-8. Compute Profit Zone R:R using opposing fresh zone
+For each ticker the user provides (already filtered to "actionable" ones near a zone):
+1. Look at current price vs each of the 6 zones
+2. For each zone within trigger distance, IDENTIFY THE CORRECT TIMEFRAME bars to use
+3. Determine ITF trend from those timeframe bars (uptrend/sideways/downtrend)
+4. Determine HTF curve position from zone row (bottom DZ = low on curve; top SZ = high on curve; other rows by relative position)
+5. Apply Decision Matrix → LONG/SHORT/NO ACTION
+6. Score the 6 Odds Enhancers using the right-timeframe bars (Strength, Time, Freshness, Trend, Curve, Profit Zone) — total must be ≥7/10 to qualify
+7. Estimate IV regime from recent ATR vs 30-day average (high ATR = IV4/5 → credit; low = IV1/2 → debit; mid = IV3 → skip)
+8. Compute Profit Zone R:R using opposing fresh zone from the saved zones
 9. If qualifies, build the trade:
    - Direction (LONG/SHORT)
    - Structure (Long Call/Put, Bull/Bear Call/Put Spread)
@@ -153,25 +174,31 @@ exports.handler = async function(event) {
   try { body = JSON.parse(event.body); }
   catch { return { statusCode: 400, headers: cors, body: JSON.stringify({ error: 'Invalid JSON' }) }; }
 
-  const { zones, prices, accountSize = 50000, riskPct = 2 } = body;
+  const { zones, quotes, bars, skippedTickers = [], accountSize = 50000, riskPct = 2 } = body;
   if (!zones || !zones.tickers) {
     return { statusCode: 400, headers: cors, body: JSON.stringify({ error: 'Missing zones data' }) };
   }
 
   const userPrompt = `Today's saved OTA zones (extracted ${zones.extractedDate || 'recently'}):
 
+ZONES (only "actionable" tickers — already filtered to those within 5% of a zone):
 ${JSON.stringify(zones.tickers, null, 2)}
 
-Live market data (current price + recent daily bars):
+LIVE QUOTES:
+${JSON.stringify(quotes, null, 2)}
 
-${JSON.stringify(prices, null, 2)}
+MULTI-TIMEFRAME BARS (per ticker, only timeframes relevant to that ticker's near zones):
+${JSON.stringify(bars, null, 2)}
+
+TICKERS SKIPPED (price too far from any zone OR data error — include in "passed" array):
+${JSON.stringify(skippedTickers, null, 2)}
 
 User account:
 - Account size: $${accountSize}
 - Risk per trade: ${riskPct}%
 - Max risk per trade: $${(accountSize * riskPct / 100).toFixed(0)}
 
-Apply the full OTA Core Strategy + Options Blueprint rules and return the option trades to put on right now. Return ONLY JSON in the format specified.`;
+Apply the full OTA Core Strategy + Options Blueprint rules using the CORRECT TIMEFRAME for each zone row position. Return ONLY JSON in the format specified. Use null for any field you can't compute.`;
 
   try {
     const res = await fetch(ANTHROPIC_URL, {
