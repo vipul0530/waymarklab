@@ -816,3 +816,98 @@ tr.has-warning td:first-child { border-left: 3px solid var(--yellow); }
 .setup-card-row:last-child { margin-bottom: 0; padding-top: 12px; border-top: 1px dashed rgba(0,0,0,0.1); }
 .setup-card-row .data-label { font-weight: 600; }
 .setup-card-row .data-value { font-size: 18px; }
+
+/* ═══════════════════════════════════════════════
+   TRADE RECOMMENDATIONS TABLE
+   ═══════════════════════════════════════════════ */
+.acct-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 14px 0;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.acct-row label { font-weight: 600; }
+
+.recs-summary {
+  margin-bottom: 14px;
+  padding: 14px 16px;
+  background: var(--blue-bg);
+  border: 1px solid var(--blue-border);
+  border-radius: var(--radius);
+}
+.summary-text { font-size: 15px; font-weight: 600; color: var(--text); }
+.recs-meta { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+
+.recs-tablewrap { overflow-x: auto; }
+.rt {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.rt th {
+  background: var(--bg3);
+  padding: 10px 8px;
+  text-align: left;
+  font-size: 11px;
+  font-weight: 700;
+  border-bottom: 2px solid var(--border-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+.rt td {
+  padding: 12px 8px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+.rt tbody tr:not(.reasoning-row):hover { background: var(--bg3); }
+.rt code {
+  background: var(--bg3);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: ui-monospace, monospace;
+  font-size: 12px;
+  font-weight: 600;
+}
+.reasoning-row td {
+  background: #fafbfc;
+  border-bottom: 2px solid var(--border-dark);
+  padding-top: 0;
+  padding-bottom: 10px;
+  color: var(--text-muted);
+}
+.reasoning-row em { color: var(--text-light); font-style: normal; }
+
+.dir-pill {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  border: 1px solid;
+}
+.dir-pill.long  { background: var(--green-bg); color: var(--green); border-color: var(--green-border); }
+.dir-pill.short { background: var(--red-bg);   color: var(--red);   border-color: var(--red-border); }
+
+.no-trades {
+  padding: 28px;
+  text-align: center;
+  background: var(--bg3);
+  border-radius: var(--radius);
+}
+.no-trades h3 { color: var(--text); font-size: 16px; }
+.passed-list {
+  list-style: none;
+  padding: 8px 0 0;
+  text-align: left;
+}
+.passed-list li {
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.passed-list li strong { color: var(--text); }

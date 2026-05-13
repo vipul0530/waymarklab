@@ -3,21 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OTA Trade Calculator</title>
+  <title>OTA Options Trade Recommender</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
 <header>
   <div class="header-inner">
-    <div class="logo">OTA Trade Calculator</div>
-    <div class="subtitle">Online Trading Academy · Daily Zones Scanner + Trade Setup</div>
+    <div class="logo">OTA Options Trade Recommender</div>
+    <div class="subtitle">Paste your zones · Get the trades to put on today</div>
   </div>
   <nav class="tabs">
     <button class="tab active" data-tab="zones" onclick="switchTab('zones')">1 · Daily Zones</button>
-    <button class="tab" data-tab="monitor" onclick="switchTab('monitor')">2 · Live Monitor</button>
-    <button class="tab" data-tab="setup" onclick="switchTab('setup')">3 · Trade Setup</button>
-    <button class="tab" data-tab="single" onclick="switchTab('single')">4 · Single Trade</button>
+    <button class="tab" data-tab="recs" onclick="switchTab('recs')">2 · Trade Recommendations</button>
   </nav>
 </header>
 
@@ -64,221 +62,36 @@
 </main>
 
 <!-- ═══════════════════════════════════════════════════════════════ -->
-<!--  TAB 2 · LIVE MONITOR                                           -->
+<!--  TAB 2 · TRADE RECOMMENDATIONS                                  -->
 <!-- ═══════════════════════════════════════════════════════════════ -->
-<main id="tab-monitor" class="tab-panel">
+<main id="tab-recs" class="tab-panel">
 
   <section class="card">
     <h2 class="section-title">
-      Live Zone Monitor
-      <button id="refreshBtn" class="btn btn-primary" style="float:right" onclick="refreshMonitor()">↻ Refresh Prices</button>
+      Trade Recommendations
+      <button id="getRecsBtn" class="btn btn-primary" style="float:right" onclick="getRecommendations()">🧠 Get Trades from Claude</button>
     </h2>
-    <p class="block-hint">Alpha Vantage free tier limits to ~25 calls/day. Each ticker = 1 call. Cached for 5 min.</p>
-    <div id="monitorAlert" class="alert hidden"></div>
-    <div id="monitorTable" class="monitor-wrap">
-      <p class="muted">Save zones in Tab 1 first, then refresh prices.</p>
+    <p class="block-hint">
+      Claude analyzes your saved zones + live Alpha Vantage prices, applies the OTA Core Strategy + Options Blueprint, and returns the option trades to put on right now.
+    </p>
+    <div class="acct-row">
+      <label>Account size: $</label>
+      <input id="acctSize" type="number" value="50000" class="num-input" style="width:120px" />
+      <label style="margin-left:16px;">Risk per trade: </label>
+      <input id="riskPctRec" type="number" value="2" step="0.1" class="num-input" style="width:80px" />
+      <span>%</span>
     </div>
-  </section>
-
-</main>
-
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!--  TAB 3 · TRADE SETUP                                            -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<main id="tab-setup" class="tab-panel">
-
-  <section class="card">
-    <h2 class="section-title">Trade Setup</h2>
-    <div id="setupHeader" class="setup-header">
-      <p class="muted">Click a setup row in the Live Monitor to load it here, then score the Odds Enhancers.</p>
-    </div>
-    <div id="setupContent" class="hidden">
-      <div id="setupSummary" class="setup-summary"></div>
-    </div>
-  </section>
-
-  <!-- Re-uses single-trade scoring (Core Strategy + OE + IV + Sizing) -->
-  <section class="card setup-only">
-    <h2 class="section-title">Step 1 · Core Strategy — Curve · Trend · Zone</h2>
-    <div class="three-col">
-      <div class="input-block">
-        <label class="block-label">HTF Curve Position</label>
-        <div class="btn-group-vert">
-          <button class="choice active" data-group="curve" data-val="high" onclick="setChoice(this,'curve')">High on Curve</button>
-          <button class="choice" data-group="curve" data-val="middle" onclick="setChoice(this,'curve')">Middle of Curve</button>
-          <button class="choice" data-group="curve" data-val="low" onclick="setChoice(this,'curve')">Low on Curve</button>
-        </div>
-      </div>
-      <div class="input-block">
-        <label class="block-label">ITF Trend</label>
-        <div class="btn-group-vert">
-          <button class="choice" data-group="trend" data-val="uptrend" onclick="setChoice(this,'trend')">↑ Uptrend</button>
-          <button class="choice active" data-group="trend" data-val="sideways" onclick="setChoice(this,'trend')">↔ Sideways</button>
-          <button class="choice" data-group="trend" data-val="downtrend" onclick="setChoice(this,'trend')">↓ Downtrend</button>
-        </div>
-      </div>
-      <div class="input-block">
-        <label class="block-label">LTF Zone</label>
-        <div class="btn-group-vert">
-          <button class="choice active" data-group="zone" data-val="demand" onclick="setChoice(this,'zone')">🟢 Demand Zone (Buy)</button>
-          <button class="choice" data-group="zone" data-val="supply" onclick="setChoice(this,'zone')">🔴 Supply Zone (Sell)</button>
-        </div>
-      </div>
-    </div>
-    <div id="decisionResult" class="decision-box"></div>
-  </section>
-
-  <section class="card setup-only">
-    <h2 class="section-title">Step 2 · Odds Enhancers <span class="max-score">(Max 10 pts)</span></h2>
-    <div class="oe-grid">
-
-      <div class="oe-row">
-        <div class="oe-label"><span class="oe-num">1</span><div><strong>Strength</strong><small>How did price leave?</small></div></div>
-        <div class="oe-choices">
-          <button class="oe-btn" data-oe="strength" data-val="2" onclick="setOE(this,'strength',2)"><span class="pts">2 pts</span><br/>Strong impulsive<br/><small>≥2:1 &amp; clean breakout</small></button>
-          <button class="oe-btn" data-oe="strength" data-val="1" onclick="setOE(this,'strength',1)"><span class="pts">1 pt</span><br/>One or other<br/><small>≥2:1 OR breakout</small></button>
-          <button class="oe-btn active" data-oe="strength" data-val="0" onclick="setOE(this,'strength',0)"><span class="pts">0 pts</span><br/>Weak<br/><small>&lt;2:1 ratio</small></button>
-        </div>
-      </div>
-
-      <div class="oe-row">
-        <div class="oe-label"><span class="oe-num">2</span><div><strong>Time</strong><small>Basing candles?</small></div></div>
-        <div class="oe-choices">
-          <button class="oe-btn" data-oe="time" data-val="1" onclick="setOE(this,'time',1)"><span class="pts">1 pt</span><br/>1–3 candles</button>
-          <button class="oe-btn" data-oe="time" data-val="0.5" onclick="setOE(this,'time',0.5)"><span class="pts">½ pt</span><br/>4–6 candles</button>
-          <button class="oe-btn active" data-oe="time" data-val="0" onclick="setOE(this,'time',0)"><span class="pts">0 pts</span><br/>&gt;6 candles</button>
-        </div>
-      </div>
-
-      <div class="oe-row">
-        <div class="oe-label"><span class="oe-num">3</span><div><strong>Freshness</strong><small>Returned to zone?</small></div></div>
-        <div class="oe-choices">
-          <button class="oe-btn" data-oe="freshness" data-val="2" onclick="setOE(this,'freshness',2)"><span class="pts">2 pts</span><br/>Not Tested</button>
-          <button class="oe-btn" data-oe="freshness" data-val="1" onclick="setOE(this,'freshness',1)"><span class="pts">1 pt</span><br/>≤50% retrace</button>
-          <button class="oe-btn active" data-oe="freshness" data-val="0" onclick="setOE(this,'freshness',0)"><span class="pts">0 pts</span><br/>&gt;50% to distal</button>
-        </div>
-      </div>
-
-      <div class="oe-row">
-        <div class="oe-label"><span class="oe-num">4</span><div><strong>Trend</strong><small>Right location?</small></div></div>
-        <div class="oe-choices">
-          <button class="oe-btn" data-oe="oe_trend" data-val="2" onclick="setOE(this,'oe_trend',2)"><span class="pts">2 pts</span><br/>With Trend</button>
-          <button class="oe-btn" data-oe="oe_trend" data-val="1" onclick="setOE(this,'oe_trend',1)"><span class="pts">1 pt</span><br/>Sideways</button>
-          <button class="oe-btn active" data-oe="oe_trend" data-val="0" onclick="setOE(this,'oe_trend',0)"><span class="pts">0 pts</span><br/>Counter</button>
-        </div>
-      </div>
-
-      <div class="oe-row">
-        <div class="oe-label"><span class="oe-num">5</span><div><strong>Curve</strong><small>Zone on curve?</small></div></div>
-        <div class="oe-choices">
-          <button class="oe-btn" data-oe="oe_curve" data-val="1" onclick="setOE(this,'oe_curve',1)"><span class="pts">1 pt</span><br/>DZ low / SZ high</button>
-          <button class="oe-btn" data-oe="oe_curve" data-val="0.5" onclick="setOE(this,'oe_curve',0.5)"><span class="pts">½ pt</span><br/>Middle</button>
-          <button class="oe-btn active" data-oe="oe_curve" data-val="0" onclick="setOE(this,'oe_curve',0)"><span class="pts">0 pts</span><br/>DZ high / SZ low</button>
-        </div>
-      </div>
-
-      <div class="oe-row">
-        <div class="oe-label"><span class="oe-num">6</span><div><strong>Profit Zone</strong><small>R:R to opposing fresh zone?</small></div></div>
-        <div class="oe-choices">
-          <button class="oe-btn" data-oe="profit" data-val="2" onclick="setOE(this,'profit',2)"><span class="pts">2 pts</span><br/>≥ 5:1</button>
-          <button class="oe-btn" data-oe="profit" data-val="1" onclick="setOE(this,'profit',1)"><span class="pts">1 pt</span><br/>≥ 3:1</button>
-          <button class="oe-btn active" data-oe="profit" data-val="0" onclick="setOE(this,'profit',0)"><span class="pts">0 pts</span><br/>&lt; 3:1</button>
-        </div>
-      </div>
-
-    </div>
-    <div class="score-bar">
-      <div class="score-display">Total: <span id="oeScore">0</span> / 10</div>
-      <div id="entryTypeResult" class="entry-type"></div>
-    </div>
-  </section>
-
-  <section class="card setup-only">
-    <h2 class="section-title">Step 3 · IV Gauge</h2>
-    <div class="iv-bar">
-      <div class="iv-section iv1" onclick="setIV(1)"><span>IV1</span><small>Very Deflated</small></div>
-      <div class="iv-section iv2" onclick="setIV(2)"><span>IV2</span><small>Deflated</small></div>
-      <div class="iv-section iv3" onclick="setIV(3)"><span>IV3</span><small>Fair</small></div>
-      <div class="iv-section iv4" onclick="setIV(4)"><span>IV4</span><small>Inflated</small></div>
-      <div class="iv-section iv5" onclick="setIV(5)"><span>IV5</span><small>Very Inflated</small></div>
-    </div>
-    <div class="iv-type-display"><span id="ivTypeLabel">Select IV level above</span></div>
-    <div id="strategyResult" class="strategy-box hidden"></div>
-  </section>
-
-  <section class="card setup-only">
-    <h2 class="section-title">Step 4 · Position Sizing</h2>
-    <div class="sizing-grid">
-      <div class="input-block"><label>Account Size ($)</label><input type="number" id="accountSize" value="50000" class="num-input" oninput="calcSizing()"/></div>
-      <div class="input-block"><label>Risk % per trade</label><input type="number" id="riskPct" value="2" step="0.1" class="num-input" oninput="calcSizing()"/></div>
-      <div class="input-block"><label>Stop per share ($)</label><input type="number" id="stopSize" value="0" step="0.01" class="num-input" oninput="calcSizing()"/></div>
-      <div class="input-block"><label>Entry Price ($)</label><input type="number" id="entryPrice" value="0" step="0.01" class="num-input" oninput="calcSizing()"/></div>
-      <div class="input-block"><label>Target Price ($)</label><input type="number" id="targetPrice" value="0" step="0.01" class="num-input" oninput="calcSizing()"/></div>
-      <div class="input-block"><label>B-A Spread Cost ($)</label><input type="number" id="spreadCost" value="0" step="0.01" class="num-input" oninput="calcSizing()"/></div>
-    </div>
-    <div id="sizingResult" class="sizing-result"></div>
-  </section>
-
-  <section class="card setup-only">
-    <h2 class="section-title">Trade Summary</h2>
-    <button class="btn btn-accent full-width" onclick="generateSummary()">Generate Full Summary</button>
-    <div id="tradeSummary" class="trade-summary hidden"></div>
-  </section>
-
-</main>
-
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!--  TAB 4 · SINGLE TRADE                                           -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<main id="tab-single" class="tab-panel">
-
-  <section class="card">
-    <h2 class="section-title">Single Trade Calculator</h2>
-    <p class="block-hint">Enter a ticker manually, run pre-checks, then walk through the OTA scoring on Tab 3.</p>
-    <div class="row gap-sm" style="margin-top:12px;">
-      <input id="tickerInput" type="text" placeholder="Ticker (e.g. AAPL)" class="ticker-input" />
-      <button id="fetchBtn" class="btn btn-primary" onclick="fetchTicker()">Fetch Data</button>
-    </div>
-    <div id="tickerResult" class="ticker-result hidden"></div>
-
-    <div class="pre-check-grid">
-      <div class="pre-check">
-        <label>Earnings &gt; 30 days away?</label>
-        <div class="toggle-group">
-          <button class="toggle active" data-group="earnings" data-val="yes" onclick="setToggle(this,'earnings')">Yes ✓</button>
-          <button class="toggle" data-group="earnings" data-val="no" onclick="setToggle(this,'earnings')">No ✗</button>
-        </div>
-        <span class="hint" id="earnings-hint"></span>
-      </div>
-      <div class="pre-check">
-        <label>Options Liquid? (OI ≥ 10,000)</label>
-        <div class="toggle-group">
-          <button class="toggle active" data-group="liquid" data-val="yes" onclick="setToggle(this,'liquid')">Yes ✓</button>
-          <button class="toggle" data-group="liquid" data-val="no" onclick="setToggle(this,'liquid')">No ✗</button>
-        </div>
-      </div>
-      <div class="pre-check">
-        <label>Within 1 dATR of Zone?</label>
-        <div class="toggle-group">
-          <button class="toggle active" data-group="datr" data-val="yes" onclick="setToggle(this,'datr')">Yes</button>
-          <button class="toggle" data-group="datr" data-val="no" onclick="setToggle(this,'datr')">No</button>
-        </div>
-      </div>
-    </div>
-    <div id="preCheckAlert" class="alert hidden"></div>
-    <p class="block-hint" style="margin-top:14px">Now switch to <strong>Tab 3 · Trade Setup</strong> to score the trade.</p>
+    <div id="recsStatus" class="parse-status hidden"></div>
+    <div id="recsResult"></div>
   </section>
 
 </main>
 
 <footer>
-  <p>OTA Trade Calculator · For educational purposes only · Not financial advice</p>
-  <p>Core Strategy &amp; Options Blueprint © Online Trading Academy</p>
+  <p>OTA Trade Recommender · For educational purposes only · Not financial advice</p>
 </footer>
 
-<script src="api.js"></script>
 <script src="zones.js"></script>
-<script src="monitor.js"></script>
-<script src="calculator.js"></script>
+<script src="recommendations.js"></script>
 </body>
 </html>
