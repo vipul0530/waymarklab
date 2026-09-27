@@ -9,6 +9,7 @@
     "cases": "node tools/build-cases.js",
     "verify": "node tools/verify.js",
     "audit": "node tools/audit.js",
+    "seo": "node tools/seo.js",
     "links": "node tools/links.js",
     "copy": "node tools/copyscan.js",
     "review": "node tools/review.js",

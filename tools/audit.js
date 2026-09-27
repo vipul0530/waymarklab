@@ -88,6 +88,11 @@ MOCKS.forEach(f => {
 });
 
 /* ---------------- vocabulary ---------------- */
+/* Southern California county names are place names, not benefits
+   administration vocabulary. They are removed before the scan so a
+   bare "county" still fails. */
+const PLACES = /\b(Orange|Los Angeles|Riverside|San Diego|San Bernardino|Ventura|Kern|Imperial) County\b/gi;
+
 const SKIP = new Set(["_archive_old_site","node_modules",".git",".netlify","assets","tradingbot","wardrobe"]);
 function walk(dir, out = []){
   for (const e of fs.readdirSync(dir, { withFileTypes:true })){
@@ -124,7 +129,7 @@ files.forEach(f => {
   src.split(/\r?\n/).forEach((line, i) => {
     OLD.forEach(w => {
       const re = new RegExp("\\b" + w.replace(/[-/]/g, "\\$&") + "\\b", "i");
-      if (re.test(line)) hits.push(["old vocabulary", w, rel + ":" + (i+1), line.trim().slice(0,110)]);
+      if (re.test(line.replace(PLACES, " "))) hits.push(["old vocabulary", w, rel + ":" + (i+1), line.trim().slice(0,110)]);
     });
     SINGULAR.forEach(w => {
       if (line.toLowerCase().includes(w.toLowerCase())) hits.push(["singular first person", w.trim(), rel + ":" + (i+1), line.trim().slice(0,110)]);
@@ -141,7 +146,7 @@ files.forEach(f => {
   src.split(/\r?\n/).forEach((line, i) => {
     OLD.forEach(w => {
       const re = new RegExp("\\b" + w.replace(/[-/]/g, "\\$&") + "\\b", "i");
-      if (re.test(line)) rawHits.push([w, rel + ":" + (i+1), line.trim().slice(0,110)]);
+      if (re.test(line.replace(PLACES, " "))) rawHits.push([w, rel + ":" + (i+1), line.trim().slice(0,110)]);
     });
   });
 });

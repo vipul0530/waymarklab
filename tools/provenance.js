@@ -43,6 +43,10 @@ const ALLOWED = [
   { term: "recertificat", where: "mockups/credentialing.html" },
 ];
 
+/* Southern California county names are place names, not benefits
+   administration vocabulary. They are removed before the scan so a
+   bare "county" still fails. */
+const PLACES = /\b(Orange|Los Angeles|Riverside|San Diego|San Bernardino|Ventura|Kern|Imperial) County\b/gi;
 const RX = new RegExp(TERMS.join("|"), "i");
 
 /* Folders a visitor should never be able to fetch. */
@@ -70,7 +74,7 @@ let dirty = 0;
 for (const rel of visible) {
   const body = fs.readFileSync(path.join(ROOT, rel), "utf8");
   body.split("\n").forEach((line, n) => {
-    const m = line.match(RX);
+    const m = line.replace(PLACES, " ").match(RX);
     if (!m) return;
     if (ALLOWED.some(a => new RegExp(a.term, "i").test(m[0]) && rel === a.where)) return;
     console.log(`  HIT  ${rel}:${n + 1}  "${m[0]}"`);

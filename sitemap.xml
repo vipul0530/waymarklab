@@ -1,73 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://waymarklab.com/</loc>
-    <lastmod>2026-09-24</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://waymarklab.com/work.html</loc>
-    <lastmod>2026-09-24</lastmod>
-    <priority>0.9</priority>
+    <loc>https://waymarklab.com/about.html</loc>
+    <lastmod>2026-09-27</lastmod>
   </url>
   <url>
     <loc>https://waymarklab.com/capabilities.html</loc>
-    <lastmod>2026-09-24</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://waymarklab.com/about.html</loc>
-    <lastmod>2026-09-24</lastmod>
-    <priority>0.7</priority>
+    <lastmod>2026-09-27</lastmod>
   </url>
   <url>
     <loc>https://waymarklab.com/contact.html</loc>
-    <lastmod>2026-09-24</lastmod>
-    <priority>0.9</priority>
+    <lastmod>2026-09-27</lastmod>
   </url>
   <url>
-    <loc>https://waymarklab.com/work-receivables.html</loc>
-    <lastmod>2026-09-24</lastmod>
-    <priority>0.7</priority>
+    <loc>https://waymarklab.com/</loc>
+    <lastmod>2026-09-27</lastmod>
   </url>
   <url>
     <loc>https://waymarklab.com/work-claims.html</loc>
-    <lastmod>2026-09-24</lastmod>
-    <priority>0.7</priority>
+    <lastmod>2026-09-27</lastmod>
   </url>
   <url>
     <loc>https://waymarklab.com/work-credentialing.html</loc>
-    <lastmod>2026-09-24</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://waymarklab.com/work-draw-control.html</loc>
-    <lastmod>2026-09-24</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://waymarklab.com/work-order-desk.html</loc>
-    <lastmod>2026-09-24</lastmod>
-    <priority>0.7</priority>
+    <lastmod>2026-09-27</lastmod>
   </url>
   <url>
     <loc>https://waymarklab.com/work-dispatch.html</loc>
-    <lastmod>2026-09-24</lastmod>
-    <priority>0.7</priority>
+    <lastmod>2026-09-27</lastmod>
+  </url>
+  <url>
+    <loc>https://waymarklab.com/work-draw-control.html</loc>
+    <lastmod>2026-09-27</lastmod>
+  </url>
+  <url>
+    <loc>https://waymarklab.com/work-order-desk.html</loc>
+    <lastmod>2026-09-27</lastmod>
   </url>
   <url>
     <loc>https://waymarklab.com/work-quality-log.html</loc>
-    <lastmod>2026-09-24</lastmod>
-    <priority>0.7</priority>
+    <lastmod>2026-09-27</lastmod>
+  </url>
+  <url>
+    <loc>https://waymarklab.com/work-receivables.html</loc>
+    <lastmod>2026-09-27</lastmod>
   </url>
   <url>
     <loc>https://waymarklab.com/work-spend-desk.html</loc>
-    <lastmod>2026-09-24</lastmod>
-    <priority>0.7</priority>
+    <lastmod>2026-09-27</lastmod>
   </url>
-
   <url>
-    <loc>https://waymarklab.com/privacy.html</loc>
-    <lastmod>2026-09-26</lastmod>
+    <loc>https://waymarklab.com/work.html</loc>
+    <lastmod>2026-09-27</lastmod>
   </url>
 </urlset>

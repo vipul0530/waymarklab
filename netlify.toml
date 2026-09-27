@@ -36,6 +36,17 @@
   force  = true
 
 # ── publish is ".", so these are uploaded. Nothing should be able to fetch them.
+# ── The canonical host is the bare domain ─────────────────────────────────────
+[[redirects]]
+  from   = "https://www.waymarklab.com/*"
+  to     = "https://waymarklab.com/:splat"
+  status = 301
+  force  = true
+
+# ── Pages are served at the .html paths their canonicals point to ─────────────
+[build.processing.html]
+  pretty_urls = false
+
 [[redirects]]
   from   = "/.git/*"
   to     = "/"

@@ -105,7 +105,8 @@ function footer(){
   <div class="wrap">
     <div>
       <span class="mark">${GLYPH}<b>Waymark Lab</b></span>
-      <p class="blurb">Custom business software and AI for growing companies.</p>
+      <p class="blurb">Automate the manual work before you hire for it.</p>
+      <p class="blurb">Based in Orange County, California. Serving companies across Southern California.</p>
     </div>
     <div>
       <p class="foot-h">Solutions</p>
@@ -209,7 +210,18 @@ function feature(c){
 
 /* ---------- a concept page ---------- */
 function casePage(c, next){
-  const title = `${c.headline} | Example Software | Waymark Lab`;
+  // the headline runs long, so the title uses a short process name
+  const SHORT_TITLE = {
+    "receivables": "Receivables Automation Example",
+    "claims": "Claims Settlement Automation Example",
+    "credentialing": "Credentialing Automation Example",
+    "draw-control": "Construction Draw Automation Example",
+    "order-desk": "Order Desk Automation Example",
+    "dispatch": "Dispatch Scheduling Automation Example",
+    "quality-log": "Quality Log Automation Example",
+    "spend-desk": "Vendor Spend Automation Example"
+  };
+  const title = `${SHORT_TITLE[c.slug] || c.headline} | Waymark Lab`;
   return `${head(title, c.cardThesis, "work-" + c.slug + ".html")}
 ${header(null)}
 
@@ -279,7 +291,7 @@ ${c.screens.map((s, i) => plate(c, s, i + 1)).join("\n")}
 ${c.details.map(d => `        <figure>
           <div class="shot-frame">
             ${DOTS}
-            <img src="assets/shots/${d.img}.png" loading="lazy" decoding="async"
+            <img src="assets/shots/${d.img}.png" width="2112" height="300" loading="lazy" decoding="async"
                  alt="${esc("Detail from the " + c.tool + " software. " + d.cap)}">
           </div>
           <figcaption>${esc(d.cap)}</figcaption>
