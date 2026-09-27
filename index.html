@@ -1,465 +1,706 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>Waymark Lab | Health & Human Services Technology for California Counties</title>
-  <meta name="description" content="Waymark Lab builds purpose-driven software for California county social services agencies — reducing administrative burden, keeping families enrolled in benefits, and modernizing HHS operations." />
-  <meta name="keywords" content="California HHS technology, county social services software, CalFresh SAR-7, benefits administration software, Medi-Cal eligibility, CalWORKs, CalSAWS integration, county welfare technology" />
-
-  <!-- Open Graph -->
-  <meta property="og:title"       content="Waymark Lab | Health & Human Services Technology" />
-  <meta property="og:description" content="Purpose-built software for California county social services agencies — built for benefits, built for caseworkers." />
-  <meta property="og:type"        content="website" />
-  <meta property="og:url"         content="https://waymarklab.com/" />
-  <meta property="og:image"       content="https://waymarklab.com/og-image.png" />
-
-  <!-- Schema.org Organization -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Waymark Lab",
-    "url": "https://waymarklab.com",
-    "email": "info@waymarklab.com",
-    "description": "Health and Human Services technology solutions for California county social services agencies",
-    "industry": "Government Technology",
-    "areaServed": "California",
-    "sameAs": []
-  }
-  </script>
-
-  <!-- Google Analytics 4 — REPLACE WITH GA4 MEASUREMENT ID -->
-  <!--
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
-  -->
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  <link rel="stylesheet" href="css/styles.css?v=2" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Custom Business Process Software and AI | Waymark Lab</title>
+<meta name="description" content="Waymark Lab builds custom software that improves the business processes a growing company runs by hand, and uses AI to show where the time and money go.">
+<link rel="canonical" href="https://waymarklab.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://waymarklab.com/">
+<meta property="og:title" content="Custom Business Process Software and AI | Waymark Lab">
+<meta property="og:description" content="Custom software that automates scheduling, billing, compliance and records work, plus AI that shows where your processes lose time and money.">
+<meta property="og:image" content="https://waymarklab.com/assets/graphics/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/graphics/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/graphics/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/graphics/apple-touch-icon.png">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Waymark Lab",
+  "url": "https://waymarklab.com",
+  "email": "info@waymarklab.com",
+  "description": "Custom business software and AI that automates manual back office processes.",
+  "areaServed": "United States",
+  "logo": "https://waymarklab.com/assets/graphics/favicon.svg"
+}
+</script>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
-  <!-- ── Navigation ── -->
-  <header>
-    <nav class="nav" role="navigation" aria-label="Main navigation">
-      <div class="container nav-inner">
-        <a href="/" class="nav-logo" aria-label="Waymark Lab home">
-          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink:0;"><rect width="28" height="28" rx="7" fill="#1B3A6B"/><path d="M6 8L10 19L14 13L18 19L22 8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="8" r="1.5" fill="white"/><circle cx="22" cy="8" r="1.5" fill="white"/><circle cx="14" cy="13" r="1.5" fill="white"/></svg>
-          <span style="font-size:1.125rem;font-weight:400;color:#1B3A6B;letter-spacing:-0.01em;line-height:1;"><strong style="font-weight:700;">Waymark</strong> Lab</span>
-        </a>
-
-        <ul class="nav-links" role="list">
-          <li><a href="/solutions/" class="nav-link">Solutions</a></li>
-          <li><a href="/research/" class="nav-link">Research</a></li>
-          <li><a href="/security/" class="nav-link">Security</a></li>
-          <li><a href="/about/"    class="nav-link">About</a></li>
-          <li><a href="/contact/"  class="nav-link">Contact</a></li>
-        </ul>
-
-        <div class="nav-cta">
-          <a href="/contact/" class="btn btn-primary">Get in Touch</a>
-        </div>
-
-        <button class="nav-toggle" aria-expanded="false" aria-label="Open navigation menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-
-      <!-- Mobile menu -->
-      <div class="nav-mobile" role="navigation" aria-label="Mobile navigation">
-        <a href="/solutions/" class="nav-mobile-link">Solutions</a>
-        <a href="/research/"  class="nav-mobile-link">Research</a>
-        <a href="/security/"  class="nav-mobile-link">Security</a>
-        <a href="/about/"     class="nav-mobile-link">About</a>
-        <a href="/contact/"   class="nav-mobile-link">Contact</a>
-        <div class="nav-mobile-cta">
-          <a href="/contact/" class="btn btn-primary">Get in Touch</a>
-        </div>
-      </div>
+<header class="site-head">
+  <div class="wrap">
+    <a class="mark" href="index.html" aria-label="Waymark Lab, home">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="3" y="17.4" width="18" height="4.2" rx="1.5"/><rect x="5.9" y="11.5" width="12.8" height="4.1" rx="1.5"/><rect x="8.4" y="5.8" width="8.8" height="3.9" rx="1.4"/></svg><b>Waymark Lab</b>
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="index.html#solutions">Solutions</a>
+      <a href="index.html#how">How it works</a>
+      <a href="work.html">Examples</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="about.html">About</a>
     </nav>
-  </header>
+    <a class="btn btn-head" href="contact.html">Book a free Process Review</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navPanel">
+      <svg class="open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <svg class="close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      Menu
+    </button>
+  </div>
+  <div class="nav-panel" id="navPanel">
+    <ul>
+      <li><a href="index.html#solutions">Solutions</a></li>
+      <li><a href="index.html#how">How it works</a></li>
+      <li><a href="work.html">Examples</a></li>
+      <li><a href="index.html#pricing">Pricing</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <div class="wrap" style="padding-bottom:24px;"><a class="btn" href="contact.html">Book a free Process Review</a></div>
+  </div>
+</header>
 
-  <main>
+<main id="main">
 
-    <!-- ── Hero ── -->
-    <section class="hero">
-      <div class="container hero-grid">
-
-        <!-- Left: Content -->
-        <div class="hero-content">
-          <div class="hero-badge">
-            <span class="hero-badge-dot" aria-hidden="true"></span>
-            <span class="hero-badge-text">Public Benefits Technology</span>
+  <!-- ===================== 1. hero ===================== -->
+  <section class="hero" id="top">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <span class="eyebrow">Custom business software and AI</span>
+          <h1>Automate the <span class="grad">manual work</span> before you hire another person to do it.</h1>
+          <p class="sub">Waymark Lab builds custom software that improves the business processes your team still runs by hand, then uses AI to show you exactly where the time and money go.</p>
+          <div class="actions">
+            <a class="btn" href="contact.html">Book a free Process Review <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+            <a class="arrowlink" href="work.html">See example software <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
           </div>
-
-          <h1 class="hero-headline">
-            Connecting Families to the Benefits They've Earned
-          </h1>
-
-          <p class="hero-sub">
-            Waymark Lab builds purpose-driven technology for public benefits agencies — reducing administrative burden, preventing unnecessary case terminations, and helping workers serve more families with less paperwork. California is our first and deepest implementation state.
-          </p>
-
-          <div class="hero-actions">
-            <a href="/solutions/" class="btn btn-primary btn-lg">
-              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-              Explore Solutions
-            </a>
-            <a href="/contact/" class="btn btn-ghost btn-lg">Schedule a Demo</a>
-          </div>
-
-          <div class="hero-stats">
-            <div class="hero-stat">
-              <div class="hero-stat-num">20+</div>
-              <div class="hero-stat-label">Years Inside County Social Services</div>
-            </div>
-            <div class="hero-stat">
-              <div class="hero-stat-num" style="font-size:1rem;">SNAP + Medicaid + TANF</div>
-              <div class="hero-stat-label">Federal Programs We Work Across</div>
-            </div>
-            <div class="hero-stat">
-              <div class="hero-stat-num">3</div>
-              <div class="hero-stat-label">Products in Active Development</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right: Visual -->
-        <div class="hero-visual" aria-hidden="true">
-          <div class="hero-blob">
-            <div class="hero-blob-inner">
-              <!-- Floating mini-cards -->
-              <div class="hero-float-card hero-float-card--2">
-                <span class="hero-float-icon"><i class="fa-solid fa-shield-halved"></i></span>
-                <span class="hero-float-label">HIPAA-Aware</span>
-              </div>
-              <div class="hero-float-card hero-float-card--3">
-                <span class="hero-float-icon"><i class="fa-solid fa-cloud"></i></span>
-                <span class="hero-float-label">Azure Government Cloud</span>
-              </div>
-              <!-- Central icon -->
-              <div class="hero-blob-icon">
-                <i class="fa-solid fa-building-columns"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ── Trust Bar ── -->
-    <section class="trust-bar">
-      <div class="container">
-        <p class="trust-label">Built on Operational Reality</p>
-        <div class="trust-chips">
-          <span class="trust-chip">20+ Years in County Social Services IT</span>
-          <span class="trust-chip">SNAP · Medicaid · TANF · General Relief</span>
-          <span class="trust-chip">CalSAWS System Expertise</span>
-          <span class="trust-chip">California First Implementation State</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── Featured Solution: Outreach Tracker ── -->
-    <section class="section-py" style="background: var(--white);">
-      <div class="container">
-        <div class="section-intro fade-in">
-          <p class="eyebrow">Featured Solution</p>
-          <h2 class="section-title">Outreach Tracker</h2>
-          <p class="section-desc">
-            SAR-7 Outreach Automation for California Counties
-          </p>
-        </div>
-
-        <div class="continuum-card fade-in">
-          <!-- Left: Blue panel -->
-          <div class="continuum-left">
-            <p class="continuum-eyebrow">SAR-7 Outreach Automation</p>
-            <h3 class="continuum-name">Outreach Tracker</h3>
-            <p class="continuum-tagline">
-              California counties lose thousands of eligible CalFresh cases every month — not because
-              families became ineligible, but because they missed a paperwork deadline. Outreach Tracker
-              automates proactive multi-channel outreach at 60, 30, 14, and 7 days before the SAR-7
-              due date — keeping eligible families enrolled.
-            </p>
-            <ul class="continuum-features">
-              <li class="continuum-feature">
-                <i class="fa-solid fa-check" aria-hidden="true"></i>
-                Proactive SMS and email outreach before deadlines
-              </li>
-              <li class="continuum-feature">
-                <i class="fa-solid fa-check" aria-hidden="true"></i>
-                Mobile-optimized digital SAR-7 completion form
-              </li>
-              <li class="continuum-feature">
-                <i class="fa-solid fa-check" aria-hidden="true"></i>
-                Real-time worker dashboard with color-coded urgency
-              </li>
-              <li class="continuum-feature">
-                <i class="fa-solid fa-check" aria-hidden="true"></i>
-                Pre-populated forms using existing case data
-              </li>
-              <li class="continuum-feature">
-                <i class="fa-solid fa-check" aria-hidden="true"></i>
-                CalSAWS-compatible data integration
-              </li>
-              <li class="continuum-feature">
-                <i class="fa-solid fa-check" aria-hidden="true"></i>
-                HIPAA-aware, built on Azure Government Cloud
-              </li>
-            </ul>
-            <a href="/solutions/" class="btn btn-white">
-              Learn More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-            </a>
-          </div>
-
-          <!-- Right: Visual panel -->
-          <div class="continuum-right">
-            <p class="continuum-right-label">SAR-7 Workflow</p>
-            <div class="continuum-graphic">
-              <div class="sar7-visual">
-                <div class="sar7-bar">
-                  <div class="sar7-bar-icon blue"><i class="fa-solid fa-file-lines" aria-hidden="true"></i></div>
-                  <span class="sar7-bar-label">SAR-7 Form Submitted</span>
-                  <span class="sar7-bar-status complete">Complete</span>
-                </div>
-                <div class="sar7-bar">
-                  <div class="sar7-bar-icon cyan"><i class="fa-solid fa-upload" aria-hidden="true"></i></div>
-                  <span class="sar7-bar-label">Documents Uploaded</span>
-                  <span class="sar7-bar-status complete">Complete</span>
-                </div>
-                <div class="sar7-bar">
-                  <div class="sar7-bar-icon blue"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></div>
-                  <span class="sar7-bar-label">Caseworker Review</span>
-                  <span class="sar7-bar-status active">In Review</span>
-                </div>
-                <div class="sar7-bar">
-                  <div class="sar7-bar-icon amber"><i class="fa-solid fa-bell" aria-hidden="true"></i></div>
-                  <span class="sar7-bar-label">Eligibility Determination</span>
-                  <span class="sar7-bar-status pending">Pending</span>
-                </div>
-                <div class="sar7-bar">
-                  <div class="sar7-bar-icon green"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div>
-                  <span class="sar7-bar-label">Benefits Renewed</span>
-                  <span class="sar7-bar-status pending">Pending</span>
-                </div>
-              </div>
-            </div>
-            <div class="continuum-product-name" aria-hidden="true">OT</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── Focus Areas ── -->
-    <section class="section-py" style="background: var(--slate-50);">
-      <div class="container">
-        <div class="section-intro centered fade-in">
-          <p class="eyebrow">Focus Areas</p>
-          <h2 class="section-title">Built for California's Benefits Ecosystem</h2>
-          <p class="section-desc">
-            Our solutions are designed around the specific programs, workflows, and compliance
-            requirements of California county Health &amp; Human Services departments.
-          </p>
-        </div>
-
-        <div class="industries-grid">
-
-          <div class="industry-card industry-card--health fade-in fade-in-delay-1">
-            <div class="industry-icon"><i class="fa-solid fa-utensils" aria-hidden="true"></i></div>
-            <h3 class="industry-name">CalFresh / Food Benefits</h3>
-            <p class="industry-desc">Reduce SAR-7 terminations, automate outreach, and keep eligible families enrolled without adding caseworker burden.</p>
-          </div>
-
-          <div class="industry-card industry-card--waste fade-in fade-in-delay-2">
-            <div class="industry-icon"><i class="fa-solid fa-briefcase" aria-hidden="true"></i></div>
-            <h3 class="industry-name">CalWORKs / Cash Aid</h3>
-            <p class="industry-desc">Streamline redeterminations, improve client communication, and reduce administrative overhead for cash aid programs.</p>
-          </div>
-
-          <div class="industry-card industry-card--permits fade-in fade-in-delay-3">
-            <div class="industry-icon"><i class="fa-solid fa-heart-pulse" aria-hidden="true"></i></div>
-            <h3 class="industry-name">Medi-Cal / Healthcare Coverage</h3>
-            <p class="industry-desc">Support eligibility workflows, renewal outreach, and compliance tracking for California's largest health coverage program.</p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ── Stats ── -->
-    <section class="stats-section">
-      <div class="container">
-        <div class="section-intro centered fade-in">
-          <p class="eyebrow">By the Numbers</p>
-          <h2 class="section-title">Trusted by California's Social Services Agencies</h2>
-        </div>
-        <div class="stats-grid">
-          <div class="stat-item fade-in fade-in-delay-1">
-            <div class="stat-bg" aria-hidden="true"></div>
-            <div class="stat-number">20+</div>
-            <div class="stat-label">Years Inside County Social Services</div>
-          </div>
-          <div class="stat-item fade-in fade-in-delay-2">
-            <div class="stat-bg" aria-hidden="true"></div>
-            <div class="stat-number" style="font-size:1.5rem;">SNAP + Medicaid + TANF</div>
-            <div class="stat-label">Federal Programs We Work Across</div>
-          </div>
-          <div class="stat-item fade-in fade-in-delay-3">
-            <div class="stat-bg" aria-hidden="true"></div>
-            <div class="stat-number">3</div>
-            <div class="stat-label">Products in Active Development</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── Why Waymark ── -->
-    <section class="section-py" style="background: var(--slate-50);">
-      <div class="container">
-        <div class="section-intro centered fade-in">
-          <p class="eyebrow">Why Waymark Lab</p>
-          <h2 class="section-title">Built Different. Built for Social Services.</h2>
-          <p class="section-desc">
-            We don't adapt commercial software for county welfare departments — we build from the
-            ground up with California HHS operations, compliance requirements, and caseworker
-            workflows at the center.
-          </p>
-        </div>
-
-        <div class="pillars-grid">
-
-          <div class="pillar-card fade-in fade-in-delay-1">
-            <span class="pillar-num" aria-hidden="true">01</span>
-            <div class="pillar-icon"><i class="fa-solid fa-landmark" aria-hidden="true"></i></div>
-            <h3 class="pillar-title">Benefits Administration Experts</h3>
-            <p class="pillar-desc">
-              We understand the complexity of California's benefits ecosystem — CalSAWS, LEADER, C-IV,
-              SAR-7 deadlines, and mid-year status reports. Built by people who have managed these
-              workflows from inside county government.
-            </p>
-          </div>
-
-          <div class="pillar-card fade-in fade-in-delay-2">
-            <span class="pillar-num" aria-hidden="true">02</span>
-            <div class="pillar-icon"><i class="fa-solid fa-lock" aria-hidden="true"></i></div>
-            <h3 class="pillar-title">HIPAA &amp; PHI Security</h3>
-            <p class="pillar-desc">
-              Benefits data contains some of the most sensitive PII in the world. Our architecture
-              is HIPAA-aware by design, with PHI protection, audit trails, and data isolation
-              built in from day one — not bolted on.
-            </p>
-          </div>
-
-          <div class="pillar-card fade-in fade-in-delay-3">
-            <span class="pillar-num" aria-hidden="true">03</span>
-            <div class="pillar-icon"><i class="fa-solid fa-plug-circle-check" aria-hidden="true"></i></div>
-            <h3 class="pillar-title">CalSAWS &amp; BenefitsCal Native</h3>
-            <p class="pillar-desc">
-              Our integrations are purpose-built for California's eligibility infrastructure.
-              We know LEADER, C-IV, CalSAWS, and BenefitsCal — and we build to work with them,
-              not around them.
-            </p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ── CTA Banner ── -->
-    <section class="cta-banner">
-      <div class="container">
-        <p class="cta-banner-eyebrow">For County Welfare Directors &amp; HHS Technology Teams</p>
-        <h2 class="cta-banner-title">Ready to Reduce Case Terminations in Your County?</h2>
-        <p class="cta-banner-desc">
-          Talk to our team about how Outreach Tracker can help your agency keep eligible families enrolled.
-        </p>
-        <div class="cta-banner-actions">
-          <a href="/contact/" class="btn btn-white btn-lg">
-            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-            Contact Us
-          </a>
-          <a href="/solutions/" class="btn btn-white-outline btn-lg">View Solutions</a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ── Footer ── -->
-  <footer class="footer" role="contentinfo">
-    <div class="container">
-      <div class="footer-grid">
-
-        <!-- Brand -->
-        <div class="footer-brand">
-          <a href="/" class="footer-brand-logo" aria-label="Waymark Lab" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
-            <svg width="26" height="26" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink:0;"><rect width="28" height="28" rx="7" fill="#1B3A6B"/><path d="M6 8L10 19L14 13L18 19L22 8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="8" r="1.5" fill="white"/><circle cx="22" cy="8" r="1.5" fill="white"/><circle cx="14" cy="13" r="1.5" fill="white"/></svg>
-            <span style="font-size:1.125rem;font-weight:400;color:#1B3A6B;letter-spacing:-0.01em;line-height:1;"><strong style="font-weight:700;">Waymark</strong> Lab</span>
-          </a>
-          <p class="footer-brand-desc">
-            Purpose-built technology for California county social services.
-          </p>
-          <p class="footer-brand-email">
-            <a href="mailto:info@waymarklab.com">info@waymarklab.com</a>
-          </p>
-        </div>
-
-        <!-- Solutions -->
-        <div class="footer-col">
-          <h4 class="footer-col-title">Solutions</h4>
-          <ul class="footer-links">
-            <li><a href="/solutions/" class="footer-link">Outreach Tracker</a></li>
-            <li><a href="/solutions/" class="footer-link">Mosaic</a></li>
-            <li><a href="/solutions/" class="footer-link">Sentinel</a></li>
-            <li><a href="/solutions/" class="footer-link">All Solutions</a></li>
+          <ul class="trust">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5.5 5.5L20 6.5"/></svg>Fixed price agreed before we start</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5.5 5.5L20 6.5"/></svg>Working prototype in days, finished software in weeks</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5.5 5.5L20 6.5"/></svg>You own the code and the data</li>
           </ul>
         </div>
 
-        <!-- Company -->
-        <div class="footer-col">
-          <h4 class="footer-col-title">Company</h4>
-          <ul class="footer-links">
-            <li><a href="/about/"   class="footer-link">About Us</a></li>
-            <li><a href="/security/" class="footer-link">Security</a></li>
-            <li><a href="/contact/" class="footer-link">Contact</a></li>
-          </ul>
-        </div>
-
-        <!-- Programs -->
-        <div class="footer-col">
-          <h4 class="footer-col-title">Programs</h4>
-          <ul class="footer-links">
-            <li><a href="/solutions/" class="footer-link">CalFresh &amp; SAR-7</a></li>
-            <li><a href="/solutions/" class="footer-link">Medi-Cal</a></li>
-            <li><a href="/solutions/" class="footer-link">CalWORKs</a></li>
-            <li><a href="/security/"  class="footer-link">HIPAA Compliance</a></li>
-          </ul>
-        </div>
-
-      </div>
-
-      <div class="footer-bottom">
-        <p class="footer-copy">&copy; 2026 Waymark Lab. All rights reserved.</p>
-        <div class="footer-bottom-links">
-          <a href="#" class="footer-bottom-link">Privacy Policy</a>
-          <a href="#" class="footer-bottom-link">Terms of Service</a>
-          <a href="#" class="footer-bottom-link">Accessibility</a>
+        <!-- G1 dashboard mockup -->
+        <div>
+          <div class="mock" role="img" aria-label="Example operations dashboard showing today's schedule, invoices ready to send, expiring documents and an AI insight about delayed invoices.">
+            <div class="mock-bar" aria-hidden="true"><i></i><i></i><i></i><span>Operations overview</span></div>
+            <div class="mock-body" aria-hidden="true">
+              <div class="mock-side">
+                <span class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Schedule</span>
+                <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h9l5 5v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M14 3v5h5M8 13h8M8 17h5"/></svg>Billing</span>
+                <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7.5 3v5.5c0 4.4-3.1 8.3-7.5 9.5-4.4-1.2-7.5-5.1-7.5-9.5V6z"/><path d="M9 12l2.2 2.2L15.5 10"/></svg>Compliance</span>
+                <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 7.5L12 3l8.5 4.5v9L12 21l-8.5-4.5z"/><path d="M3.5 7.5L12 12l8.5-4.5M12 12v9"/></svg>Inventory</span>
+                <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>Insights</span>
+              </div>
+              <div class="mock-main">
+                <div class="mock-kpis">
+                  <div class="mock-kpi">
+                    <div class="top"><b>42</b><span class="tr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 15l7-7 7 7"/></svg>8</span></div>
+                    <span>Jobs scheduled today</span>
+                  </div>
+                  <div class="mock-kpi">
+                    <div class="top"><b>17</b><span class="tr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 15l7-7 7 7"/></svg>5</span></div>
+                    <span>Invoices ready to send</span>
+                  </div>
+                  <div class="mock-kpi">
+                    <div class="top"><b>5</b></div>
+                    <span>Documents expiring in 30 days</span>
+                  </div>
+                </div>
+                <div class="mock-chart">
+                  <svg viewBox="0 0 320 76" preserveAspectRatio="none" role="presentation">
+                    <defs>
+                      <linearGradient id="mkFill" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0" stop-color="#6472F0" stop-opacity=".34"/>
+                        <stop offset="1" stop-color="#6472F0" stop-opacity="0"/>
+                      </linearGradient>
+                    </defs>
+                    <path d="M4 58C30 58 30 44 56 44S82 50 108 50 134 34 160 34s26 6 52 6 26-18 52-18 26-8 52-8V76H4Z" fill="url(#mkFill)"/>
+                    <path d="M4 38h312" stroke="#C5CBF3" stroke-width="1" stroke-dasharray="3 4" vector-effect="non-scaling-stroke"/>
+                    <path d="M4 58C30 58 30 44 56 44S82 50 108 50 134 34 160 34s26 6 52 6 26-18 52-18 26-8 52-8"
+                          fill="none" stroke="#3A49C7" stroke-width="2.2" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+                  </svg>
+                  <span class="dot" style="left:82.5%;top:28.9%"></span>
+                  <span class="dot last" style="left:98.7%;top:18.4%"></span>
+                </div>
+                <p class="mock-cap"><span>Billed per week</span><b>Up 18% on last month</b></p>
+                <div class="mock-list">
+                  <div class="mock-row"><span class="nm"><span class="av">AP</span>Alder Point, work order 4471</span><span class="chip-s chip-ok">On track</span></div>
+                  <div class="mock-row"><span class="nm"><span class="av c">FS</span>Certificate of insurance, Ferro Steel</span><span class="chip-s chip-warn">Expires in 9 days</span></div>
+                  <div class="mock-row"><span class="nm"><span class="av b">PM</span>Payment 88214 to invoice</span><span class="chip-s chip-ok">Matched</span></div>
+                  <div class="mock-row"><span class="nm"><span class="av c">SB</span>Site B closeout packet</span><span class="chip-s chip-warn">Missing signature</span></div>
+                </div>
+                <div class="mock-ai">
+                  <span class="spark"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.8 4.6 8.8 9.4 9.4C16.6 12 12.6 16 12 20.8 11.4 16 7.4 12 2.6 11.4 7.4 10.8 11.4 6.8 12 2z"/></svg></span>
+                  <p><b>Invoices for Site B wait 6 days longer than average.</b> Most are missing a signed work order.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="mock-note">Illustrative sample data.</p>
         </div>
       </div>
     </div>
-  </footer>
+  </section>
 
-  <script src="js/main.js?v=2"></script>
+  <!-- ===================== 2. warning signs ===================== -->
+  <section class="section band" id="signs">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Signs a process has outgrown your spreadsheets</h2>
+      </div>
+      <div class="grid-3">
+        <div class="sign">
+          <span class="ico ico-sm" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="9.5" cy="7" r="3.4"/><path d="M3.4 20.2a6.1 6.1 0 0 1 12.2 0"/><circle cx="18.6" cy="16.6" r="4" stroke="#3A49C7"/><path d="M18.6 14.9v1.9l1.4.9" stroke="#3A49C7"/></svg>
+          </span>
+          <h3>Everything depends on one person</h3>
+          <p>When they take a vacation, the schedule, the billing or the renewals quietly stop.</p>
+        </div>
+        <div class="sign">
+          <span class="ico ico-sm" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3.5h6l3.5 3.5v8a1.5 1.5 0 0 1-1.5 1.5H8a1.5 1.5 0 0 1-1.5-1.5V5A1.5 1.5 0 0 1 8 3.5z"/><path d="M14 3.5V7h3.5"/><path d="M4.2 8.5A1.5 1.5 0 0 0 2.7 10v9A1.5 1.5 0 0 0 4.2 20.5h8"/><path d="M6.6 21.8l-2-1.3 2-1.3" stroke="#3A49C7"/></svg>
+          </span>
+          <h3>Your team types the same data twice</h3>
+          <p>Orders, invoices and job details get copied between systems that do not talk to each other.</p>
+        </div>
+        <div class="sign">
+          <span class="ico ico-sm" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3.2" y="4.6" width="17.6" height="16.2" rx="2"/><path d="M3.2 9.4h17.6M8 2.8v3.6M16 2.8v3.6"/><path d="M12 12.4v3.2" stroke="#B7791F" stroke-width="2.2"/><path d="M12 18.3h.01" stroke="#B7791F" stroke-width="2.4"/></svg>
+          </span>
+          <h3>Problems show up after the deadline</h3>
+          <p>An expired certificate, a missed invoice or a stalled order is found when it is already costing money.</p>
+        </div>
+      </div>
+      <p class="closing">If any of these sound familiar, the answer is usually software, not another hire.</p>
+    </div>
+  </section>
+
+  <!-- ===================== 3. solutions ===================== -->
+  <section class="section" id="solutions">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>What we automate</h2>
+        <p class="sub">We take on any business process that runs on manual work. These six come up most often, and every build is shaped around your process, not a template.</p>
+      </div>
+      <div class="grid-3">
+
+        <div class="card">
+          <span class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="4.4" width="18.4" height="16.8" rx="2"/><path d="M2.8 9.2h18.4M7.6 2.6v3.6M16.4 2.6v3.6"/><path d="M15.6 13.2a2.4 2.4 0 1 1 4.8 0c0 1.8-2.4 4.2-2.4 4.2s-2.4-2.4-2.4-4.2z" fill="#ECEEFC" stroke="#3A49C7"/><path d="M6.4 12.6h4M6.4 16.2h3" /></svg>
+          </span>
+          <h3>Scheduling and dispatch</h3>
+          <p>Assign the right person to the right job without the whiteboard. Skills, certifications, availability and customer rules are checked automatically, and changes reach the field in one step.</p>
+          <p class="outcome">Schedules that hold up through a sick day or a vacation.</p>
+        </div>
+
+        <div class="card">
+          <span class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5.4 2.8h9.2l4 4v10.4a2 2 0 0 1-2 2H5.4a2 2 0 0 1-2-2V4.8a2 2 0 0 1 2-2z"/><path d="M14.6 2.8v4h4M7 9.4h6M7 12.8h4"/><path d="M6.6 16.4l1.8 1.8 3.4-3.6" stroke="#3A49C7" stroke-width="2"/><circle cx="18" cy="18.4" r="3.2" fill="#ECEEFC" stroke="#3A49C7"/><path d="M18 16.9v3" stroke="#3A49C7"/></svg>
+          </span>
+          <h3>Billing, invoicing and reconciliation</h3>
+          <p>Invoices go out when the work is done, not when someone finds time. Payments are matched to invoices automatically, and the paperwork holding up payment is flagged before it ages.</p>
+          <p class="outcome">Faster billing and fewer write offs.</p>
+        </div>
+
+        <div class="card">
+          <span class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 2.8h7.6l3.4 3.4v5"/><path d="M5 2.8A1.8 1.8 0 0 0 3.2 4.6v14.8A1.8 1.8 0 0 0 5 21.2h5.4"/><path d="M12.2 2.8v3.6h3.6M6.6 9.2h5M6.6 12.6h4"/><path d="M17.8 12.2l3.4 1.4v3c0 2.2-1.5 3.7-3.4 4.2-1.9-.5-3.4-2-3.4-4.2v-3z" fill="#ECEEFC" stroke="#3A49C7"/></svg>
+          </span>
+          <h3>Compliance and document tracking</h3>
+          <p>Every certificate, license and required document is tracked against its expiration date. Reminders go out before anything lapses, and the record is ready when an auditor or lender asks.</p>
+          <p class="outcome">Nothing expires without warning.</p>
+        </div>
+
+        <div class="card">
+          <span class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="15.4" width="8.2" height="5.8" rx="1.2"/><rect x="3" y="9" width="8.2" height="5.8" rx="1.2"/><rect x="3" y="2.6" width="8.2" height="5.8" rx="1.2"/><path d="M16.8 20.4V7.6" stroke="#3A49C7" stroke-width="2"/><path d="M13.6 10.8l3.2-3.2 3.2 3.2" stroke="#3A49C7" stroke-width="2"/></svg>
+          </span>
+          <h3>Inventory and purchasing</h3>
+          <p>Stock levels, reorder points and purchase approvals live in one place. Shortages surface before an order stalls, and every purchase goes to the right approver.</p>
+          <p class="outcome">Fewer stockouts and no surprise spending.</p>
+        </div>
+
+        <div class="card">
+          <span class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2.6" y="5.4" width="12.6" height="9.4" rx="1.6"/><circle cx="6.6" cy="9.2" r="1.7"/><path d="M4.4 12.6a3 3 0 0 1 4.4 0M10.6 8.6h2.4M10.6 11.4h2.4"/><path d="M8.6 17.8h4.8l1.4 1.8h5.6a1.4 1.4 0 0 1 1.4 1.4" stroke="#3A49C7"/><path d="M17.4 21.4h-7a1.4 1.4 0 0 1-1.4-1.4v-4.6" stroke="#3A49C7"/></svg>
+          </span>
+          <h3>Credentialing and records management</h3>
+          <p>Staff, provider and vendor files stay complete and current, with renewals tracked automatically. A lapsed credential never stops billing or holds up a job.</p>
+          <p class="outcome">Complete records without the chasing.</p>
+        </div>
+
+        <div class="card">
+          <span class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3.2 20.6h17.6"/><path d="M5.6 20.6v-6.2M9.6 20.6V9.4M13.6 20.6v-4"/><circle cx="17.4" cy="8.6" r="3.6" stroke="#3A49C7"/><path d="M20.2 11.4l2.2 2.2" stroke="#3A49C7"/><path d="M6.2 5.2c.3 1.6 1.6 2.9 3.2 3.2-1.6.3-2.9 1.6-3.2 3.2-.3-1.6-1.6-2.9-3.2-3.2 1.6-.3 2.9-1.6 3.2-3.2z" fill="#6472F0" stroke="none"/></svg>
+          </span>
+          <h3>AI data analysis and process insights</h3>
+          <p>We analyze your own transaction, schedule and billing data to find where work stalls, where errors repeat and where money leaks. You get a clear list of fixes, ranked by what each one is worth.</p>
+          <p class="outcome">Decisions based on your data, not guesses.</p>
+        </div>
+
+      </div>
+
+      <p class="note-line">
+        <span class="ico ico-sm" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="6.2" cy="12" r="3.2"/><circle cx="17.8" cy="12" r="3.2"/><path d="M9.4 12h5.2" stroke="#3A49C7" stroke-width="2"/></svg>
+        </span>
+        <span>Every solution connects to the accounting, operations and document systems you already use, so nobody retypes anything.</span>
+      </p>
+      <p style="margin-top:var(--s4);"><a class="arrowlink" href="capabilities.html">See how each one works <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></p>
+    </div>
+  </section>
+
+  <!-- ===================== 4. before and after ===================== -->
+  <section class="section band" id="before-after">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>From spreadsheets and inboxes to one system that runs the process</h2>
+      </div>
+      <div class="ba">
+        <figure>
+          <svg viewBox="0 0 1200 560" role="img" xmlns="http://www.w3.org/2000/svg"
+               aria-label="Before: the same data retyped between a spreadsheet, email, a sticky note and two separate systems, with one person holding it together. After: one workflow that collects, checks, reminds and reports into a single screen, where only the decisions reach a person.">
+            <defs>
+              <linearGradient id="baNode" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#EDEFFD"/><stop offset="1" stop-color="#E4E7FB"/></linearGradient>
+              <linearGradient id="baBar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6472F0"/><stop offset="1" stop-color="#3A49C7"/></linearGradient>
+              <linearGradient id="baBarD" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2A3270"/><stop offset="1" stop-color="#0E1230"/></linearGradient>
+              <linearGradient id="baBtn" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#171C44"/><stop offset="1" stop-color="#3A49C7"/></linearGradient>
+              <filter id="baSh" x="-25%" y="-25%" width="150%" height="170%"><feDropShadow dx="0" dy="6" stdDeviation="9" flood-color="#0E1230" flood-opacity="0.10"/></filter>
+              <filter id="baShS" x="-40%" y="-40%" width="180%" height="200%"><feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0E1230" flood-opacity="0.10"/></filter>
+              <marker id="baAr" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 1.2L8.6 5 0 8.8z" fill="#3A49C7"/></marker>
+            </defs>
+            <rect width="1200" height="560" fill="#FFFFFF"/>
+            <line x1="600" y1="44" x2="600" y2="516" stroke="#E4E8E6"/>
+
+            <text x="56" y="56" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.3" fill="#667069">TODAY</text>
+
+            <g stroke="#CBD4D0" stroke-width="1.6" fill="none">
+              <path d="M300 282 L184 206"/><path d="M300 282 L406 202"/>
+              <path d="M300 282 L186 322"/><path d="M300 282 L404 324"/>
+            </g>
+
+            <g transform="rotate(-3 140 156)" filter="url(#baSh)"><rect x="56" y="104" width="168" height="104" rx="11" fill="#FFFFFF" stroke="#E4E8E6"/>
+              <rect x="70" y="118" width="56" height="9" rx="4.5" fill="#DDE3E0"/>
+              <g stroke="#E8ECEA"><path d="M56 140h168M112 140v68M168 140v68"/></g>
+            </g>
+            <text x="140" y="230" font-family="Inter, Arial, sans-serif" font-size="12.5" fill="#667069" text-anchor="middle">Spreadsheet</text>
+
+            <g transform="rotate(2.5 440 150)" filter="url(#baSh)"><rect x="356" y="98" width="168" height="104" rx="11" fill="#FFFFFF" stroke="#E4E8E6"/>
+              <rect x="382" y="124" width="116" height="52" rx="7" fill="#F6F8F7" stroke="#DDE3E0"/>
+              <path d="M382 128l58 34 58-34" fill="none" stroke="#C4CDC9" stroke-width="1.8"/>
+            </g>
+            <text x="440" y="224" font-family="Inter, Arial, sans-serif" font-size="12.5" fill="#667069" text-anchor="middle">Email</text>
+
+            <g transform="rotate(3 136 352)" filter="url(#baSh)">
+              <rect x="60" y="304" width="152" height="96" rx="11" fill="#FEF6E7" stroke="#F0DDBC"/>
+              <g stroke="#E3CB92" stroke-width="2.6" stroke-linecap="round"><path d="M80 332h100M80 350h84M80 368h58"/></g>
+            </g>
+            <text x="136" y="422" font-family="Inter, Arial, sans-serif" font-size="12.5" fill="#667069" text-anchor="middle">Sticky note</text>
+
+            <g transform="rotate(-2 432 356)" filter="url(#baSh)"><rect x="344" y="304" width="176" height="104" rx="11" fill="#FFFFFF" stroke="#E4E8E6"/>
+              <g fill="#DDE3E0"><circle cx="362" cy="322" r="3.5"/><circle cx="374" cy="322" r="3.5"/></g>
+              <g stroke="#E8ECEA" stroke-width="8" stroke-linecap="round"><path d="M362 348h120M362 370h84"/></g>
+            </g>
+            <text x="432" y="430" font-family="Inter, Arial, sans-serif" font-size="12.5" fill="#667069" text-anchor="middle">Two separate systems</text>
+
+            <g filter="url(#baShS)"><circle cx="300" cy="282" r="32" fill="#FFFFFF" stroke="#D5DCD9"/></g>
+            <g fill="none" stroke="#5B6763" stroke-width="2.4" stroke-linecap="round"><circle cx="300" cy="274" r="8.5"/><path d="M285 298a15 15 0 0 1 30 0"/></g>
+
+            <g filter="url(#baShS)"><rect x="189.0" y="221" width="74" height="26" rx="13" fill="#FFFFFF" stroke="#F3D0CC"/><circle cx="204.0" cy="234" r="3.5" fill="#D9544A"/><text x="215.0" y="238" font-family="Inter, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#A8382E">retyped</text></g><g filter="url(#baShS)"><rect x="335.0" y="217" width="70" height="26" rx="13" fill="#FFFFFF" stroke="#F3D0CC"/><circle cx="350.0" cy="230" r="3.5" fill="#D9544A"/><text x="361.0" y="234" font-family="Inter, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#A8382E">missed</text></g><g filter="url(#baShS)"><rect x="186.0" y="303" width="76" height="26" rx="13" fill="#FFFFFF" stroke="#F3D0CC"/><circle cx="201.0" cy="316" r="3.5" fill="#D9544A"/><text x="212.0" y="320" font-family="Inter, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#A8382E">rekeyed</text></g><g filter="url(#baShS)"><rect x="332.0" y="307" width="72" height="26" rx="13" fill="#FFFFFF" stroke="#F3D0CC"/><circle cx="347.0" cy="320" r="3.5" fill="#D9544A"/><text x="358.0" y="324" font-family="Inter, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#A8382E">waiting</text></g>
+
+            <text x="56" y="500" font-family="Inter, Arial, sans-serif" font-size="14" fill="#667069">One person holds it together.</text>
+
+            <text x="656" y="56" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.3" fill="#3A49C7">WITH WAYMARK LAB</text>
+
+            <g><rect x="656" y="96" width="104" height="44" rx="12" fill="url(#baNode)" stroke="#C5CBF3"/><text x="708" y="124" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#171C44" text-anchor="middle">Collect</text></g><g><rect x="784" y="96" width="104" height="44" rx="12" fill="url(#baNode)" stroke="#C5CBF3"/><text x="836" y="124" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#171C44" text-anchor="middle">Check</text></g><g><rect x="912" y="96" width="104" height="44" rx="12" fill="url(#baNode)" stroke="#C5CBF3"/><text x="964" y="124" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#171C44" text-anchor="middle">Remind</text></g><g><rect x="1040" y="96" width="104" height="44" rx="12" fill="url(#baNode)" stroke="#C5CBF3"/><text x="1092" y="124" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#171C44" text-anchor="middle">Report</text></g>
+            <g stroke="#3A49C7" stroke-width="1.8" marker-end="url(#baAr)" fill="none">
+              <path d="M762 118h14"/><path d="M890 118h14"/><path d="M1018 118h14"/>
+              <path d="M1092 146v26"/>
+            </g>
+
+            <g filter="url(#baSh)"><rect x="656" y="186" width="488" height="200" rx="14" fill="#FFFFFF" stroke="#E4E8E6"/></g>
+            <path d="M656 216h488" stroke="#EDF1EF"/>
+            <g><circle cx="676" cy="201" r="4" fill="#F0B4AE"/><circle cx="690" cy="201" r="4" fill="#F2D6A6"/><circle cx="704" cy="201" r="4" fill="#AEDCC9"/></g>
+            <g><rect x="680" y="232" width="136" height="62" rx="10" fill="#FFFFFF" stroke="#E4E8E6"/><text x="696" y="266" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="23" font-weight="800" fill="#0F1A16">42</text><text x="696" y="284" font-family="Inter, Arial, sans-serif" font-size="11" fill="#667069">Jobs today</text></g><g><rect x="832" y="232" width="136" height="62" rx="10" fill="#FFFFFF" stroke="#E4E8E6"/><text x="848" y="266" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="23" font-weight="800" fill="#0F1A16">17</text><text x="848" y="284" font-family="Inter, Arial, sans-serif" font-size="11" fill="#667069">Invoices ready</text></g><g><rect x="984" y="232" width="136" height="62" rx="10" fill="#FFFFFF" stroke="#E4E8E6"/><text x="1000" y="266" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="23" font-weight="800" fill="#0F1A16">5</text><text x="1000" y="284" font-family="Inter, Arial, sans-serif" font-size="11" fill="#667069">Expiring soon</text></g><rect x="680" y="330" width="26" height="26" rx="5" fill="url(#baBar)"/><rect x="716" y="318" width="26" height="38" rx="5" fill="url(#baBar)"/><rect x="752" y="326" width="26" height="30" rx="5" fill="url(#baBar)"/><rect x="788" y="310" width="26" height="46" rx="5" fill="url(#baBar)"/><rect x="824" y="322" width="26" height="34" rx="5" fill="url(#baBarD)"/>
+            <text x="880" y="342" font-family="Inter, Arial, sans-serif" font-size="13" fill="#414A46">Everything in one place</text>
+
+            <g filter="url(#baShS)"><circle cx="682" cy="444" r="26" fill="#EDEFFD" stroke="#3A49C7" stroke-width="1.4"/></g>
+            <g fill="none" stroke="#171C44" stroke-width="2.4" stroke-linecap="round"><circle cx="682" cy="437" r="7.5"/><path d="M669 459a13 13 0 0 1 26 0"/></g>
+            <g filter="url(#baSh)"><rect x="726" y="421" width="148" height="46" rx="12" fill="url(#baBtn)"/></g>
+            <text x="800" y="450" font-family="Plus Jakarta Sans, Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">Approve</text>
+            <text x="894" y="450" font-family="Inter, Arial, sans-serif" font-size="14" fill="#414A46">Only the decisions reach a person.</text>
+          </svg>
+        </figure>
+        <p class="swipe">Swipe the diagram to see both sides.</p>
+        <div class="ba-cap">
+          <div>
+            <span class="lab">Today</span>
+            <p>Data copied between spreadsheets, email and separate systems. One person holds it together.</p>
+          </div>
+          <div>
+            <span class="lab now">With Waymark Lab</span>
+            <p>One workflow that collects the data, checks it, sends the reminders and shows your team only what needs a decision.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 5. how it works ===================== -->
+  <section class="section" id="how">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>How it works</h2>
+        <p class="sub">You see your own process working before you commit to building it.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <span class="badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2.6" y="3.4" width="7" height="5.2" rx="1.4"/><rect x="2.6" y="14" width="7" height="5.2" rx="1.4"/><path d="M9.6 6h3.2v10.6H9.6"/><circle cx="17.2" cy="11.4" r="4.4"/><path d="M20.4 14.6l2.2 2.2"/></svg>
+            <em>1</em>
+          </span>
+          <h3>Discovery</h3>
+          <p>We walk through the process with the people who run it, map every step including the ones nobody wrote down, and review your data to see where time and money go. You get a fixed price before any building starts.</p>
+        </div>
+        <div class="step">
+          <span class="badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2.6" y="4" width="18.8" height="14.4" rx="2"/><path d="M2.6 8.4h18.8"/><circle cx="6" cy="6.2" r="0.9" fill="currentColor"/><path d="M11.4 12l4.6 7.4 1.2-3.2 3.2-.9z" fill="currentColor" stroke="none"/></svg>
+            <em>2</em>
+          </span>
+          <h3>A working prototype in days</h3>
+          <p>Instead of a requirements document, you get real screens running your own process. Your team tries it, we refine it, and the price stays fixed unless you change the scope in writing.</p>
+        </div>
+        <div class="step">
+          <span class="badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.6c3.2 2.4 5 6 5 9.8l-2.6 3.4H9.6L7 12.4c0-3.8 1.8-7.4 5-9.8z"/><circle cx="12" cy="10.2" r="2.2"/><path d="M9.4 17.6l-2 3.8 3.4-1.2M14.6 17.6l2 3.8-3.4-1.2"/></svg>
+            <em>3</em>
+          </span>
+          <h3>Launch and ongoing support</h3>
+          <p>We move your data, train your team and run alongside the old process until everyone trusts the new one. After launch we support and improve the software as your business changes.</p>
+        </div>
+      </div>
+      <div class="actions" style="margin-top:var(--s6);">
+        <a class="btn" href="contact.html">Book a free Process Review <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 6. what the AI does ===================== -->
+  <section class="section band" id="ai">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>AI inside the work, not a chat box in the corner</h2>
+        <p class="sub">It reads what arrives, drafts what goes out, and flags what is missing before it becomes expensive. A person stays in control of every decision.</p>
+      </div>
+      <div class="grid-2">
+        <div class="card flat">
+          <span class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5.6 2.8h7.6l4.4 4.4v12a2 2 0 0 1-2 2H5.6a2 2 0 0 1-2-2v-14a2 2 0 0 1 2-2z"/><path d="M13.2 2.8v4.4h4.4M7 12h5M7 15.6h4"/><path d="M17.6 13.4c.3 1.7 1.7 3.1 3.4 3.4-1.7.3-3.1 1.7-3.4 3.4-.3-1.7-1.7-3.1-3.4-3.4 1.7-.3 3.1-1.7 3.4-3.4z" fill="#6472F0" stroke="none"/></svg>
+          </span>
+          <h3>Reads the documents</h3>
+          <p>Certificates, licenses and delivery photos are read into fields, with weak reads flagged for a person. Confirmed in one click instead of typed again.</p>
+          <p><a class="arrowlink" href="work-draw-control.html">See it on a certificate of insurance <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></p>
+        </div>
+        <div class="card flat">
+          <span class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6.6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7"/><path d="M3 6.6l9 6.2 9-6.2"/><path d="M3 6.6v10.8a2 2 0 0 0 2 2h7"/><path d="M15.6 21.2l5.6-5.6-2.4-2.4-5.6 5.6-.6 3z" fill="#ECEEFC" stroke="#3A49C7"/></svg>
+          </span>
+          <h3>Drafts what goes out</h3>
+          <p>Follow ups, notices and statements are assembled from the actual record, ready to edit before they send and logged after.</p>
+          <p><a class="arrowlink" href="work-receivables.html">See it on a stuck invoice <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></p>
+        </div>
+        <div class="card flat">
+          <span class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3.2" y="3" width="17.6" height="18" rx="2"/><path d="M7 8.2l1.6 1.6 3-3" stroke="#3A49C7" stroke-width="2"/><path d="M13.4 8.2h4M7 14.2h10.4M7 17.6h6.4"/><circle cx="18.6" cy="16" r="2.6" fill="#FFF8EC" stroke="#B7791F"/><path d="M18.6 14.8v1.4" stroke="#B7791F" stroke-width="1.8"/></svg>
+          </span>
+          <h3>Checks before you submit</h3>
+          <p>Names the items that will get a packet rejected, and why, before it leaves the building.</p>
+          <p><a class="arrowlink" href="work-credentialing.html">See it on a payer packet <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></p>
+        </div>
+        <div class="card flat">
+          <span class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.4" cy="6.2" r="1.5" fill="currentColor" stroke="none"/><circle cx="10.6" cy="17.4" r="1.5" fill="currentColor" stroke="none"/><circle cx="4.8" cy="14.6" r="1.5" fill="currentColor" stroke="none"/><circle cx="15.2" cy="4.6" r="1.5" fill="currentColor" stroke="none"/><circle cx="16.4" cy="12.4" r="1.6" fill="#3A49C7" stroke="none"/><circle cx="19.4" cy="15.4" r="1.6" fill="#3A49C7" stroke="none"/><circle cx="18" cy="9.2" r="1.6" fill="#3A49C7" stroke="none"/><circle cx="18" cy="12.4" r="6.4" stroke="#3A49C7"/></svg>
+          </span>
+          <h3>Finds the pattern</h3>
+          <p>Spots repeats a person cannot see from a list, like the same claim at the same address or a count that is always short after a delivery.</p>
+          <p><a class="arrowlink" href="work-order-desk.html">See it on a count history <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></p>
+        </div>
+      </div>
+      <p class="closing">Every suggestion shows its basis and can be overridden in one click.</p>
+    </div>
+  </section>
+
+  <!-- ===================== 7. example software ===================== -->
+  <section class="section" id="examples">
+    <div class="wrap">
+      <div class="head-row">
+        <div class="section-head">
+          <h2>Example software</h2>
+          <p class="sub">Working concepts that show what the software behind a manual process looks like. The companies and data in them are invented, and every screen says so.</p>
+        </div>
+        <a class="btn-line" href="work.html">See all eight examples</a>
+      </div>
+      <div class="grid-3">
+    <!-- gallery:start -->
+        <article class="work-card">
+          <a class="shot-frame" href="work-receivables.html" tabindex="-1" aria-hidden="true">
+            <span class="bar" aria-hidden="true"><i></i><i></i><i></i></span>
+            <img src="assets/shots/receivables-01-stuck.png" width="2880" height="1800" loading="lazy" decoding="async"
+                 alt="Receivables software for Vantera Mechanical Group, first screen, what is stuck. The queue is grouped by who owes the next move, not by age.">
+          </a>
+          <div class="body">
+            <h3><a href="work-receivables.html">The aged receivable is mostly our own paperwork</a></h3>
+            <p>Most of what sits past ninety days is not a customer refusing to pay. It is a document nobody inside the building has produced yet.</p>
+            <div class="foot">
+              <span class="chip">Example: Commercial mechanical contractor</span>
+              <a class="arrowlink" href="work-receivables.html">See the concept <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+        </article>
+        <article class="work-card">
+          <a class="shot-frame" href="work-claims.html" tabindex="-1" aria-hidden="true">
+            <span class="bar" aria-hidden="true"><i></i><i></i><i></i></span>
+            <img src="assets/shots/claims-01-cycle.png" width="2880" height="1800" loading="lazy" decoding="async"
+                 alt="Settlement software for Ashcroft Final Mile, first screen, closing this cycle. The cutoff is the screen.">
+          </a>
+          <div class="body">
+            <h3><a href="work-claims.html">A claim that misses the settlement cutoff is gone</a></h3>
+            <p>Damage claims are worth money only until the carrier settlement run closes. After that the loss is permanent and nobody sends a reminder.</p>
+            <div class="foot">
+              <span class="chip">Example: Final mile delivery</span>
+              <a class="arrowlink" href="work-claims.html">See the concept <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+        </article>
+        <article class="work-card">
+          <a class="shot-frame" href="work-credentialing.html" tabindex="-1" aria-hidden="true">
+            <span class="bar" aria-hidden="true"><i></i><i></i><i></i></span>
+            <img src="assets/shots/credentialing-01-expiring.png" width="2880" height="1800" loading="lazy" decoding="async"
+                 alt="Provider File software for Cortland Medical Group, first screen, expiring credentials. Every provider plotted on a hundred and twenty day horizon by the item that expires first, with monthly billing attached to each one.">
+          </a>
+          <div class="body">
+            <h3><a href="work-credentialing.html">A lapsed credential stops the billing silently</a></h3>
+            <p>Nothing announces a lapsed credential. The claim denies six weeks after the visit, and by then there are six weeks of visits behind it.</p>
+            <div class="foot">
+              <span class="chip">Example: Multi site medical group</span>
+              <a class="arrowlink" href="work-credentialing.html">See the concept <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+        </article>
+        <article class="work-card">
+          <a class="shot-frame" href="work-draw-control.html" tabindex="-1" aria-hidden="true">
+            <span class="bar" aria-hidden="true"><i></i><i></i><i></i></span>
+            <img src="assets/shots/draw-control-01-wall.png" width="2880" height="1800" loading="lazy" decoding="async"
+                 alt="Draw Control software for Bellhaven Construction Group, first screen, coverage wall. Every subcontractor on the job against every coverage they owe, with the expiration printed on the certificate rather than the date somebody typed into a spreadsheet.">
+          </a>
+          <div class="body">
+            <h3><a href="work-draw-control.html">One expired certificate holds the entire draw</a></h3>
+            <p>The lender reviews the draw package as one document. A single subcontractor certificate that expired mid month holds all nine trades.</p>
+            <div class="foot">
+              <span class="chip">Example: General contractor</span>
+              <a class="arrowlink" href="work-draw-control.html">See the concept <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+        </article>
+        <article class="work-card">
+          <a class="shot-frame" href="work-order-desk.html" tabindex="-1" aria-hidden="true">
+            <span class="bar" aria-hidden="true"><i></i><i></i><i></i></span>
+            <img src="assets/shots/order-desk-01-blocked.png" width="2880" height="1800" loading="lazy" decoding="async"
+                 alt="Order Desk software for Halstead Supply Co., first screen, orders that will not ship. Six orders, each stopped by exactly one line, with the blocking item opened inline.">
+          </a>
+          <div class="body">
+            <h3><a href="work-order-desk.html">The margin leaks where the shelf and the system disagree</a></h3>
+            <p>Six orders stopped this morning. Not one of them stopped because a customer changed something.</p>
+            <div class="foot">
+              <span class="chip">Example: Wholesale distributor</span>
+              <a class="arrowlink" href="work-order-desk.html">See the concept <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+        </article>
+        <article class="work-card">
+          <a class="shot-frame" href="work-dispatch.html" tabindex="-1" aria-hidden="true">
+            <span class="bar" aria-hidden="true"><i></i><i></i><i></i></span>
+            <img src="assets/shots/dispatch-01-today.png" width="2880" height="1800" loading="lazy" decoding="async"
+                 alt="The Board software for Torrey Mechanical Services, first screen, today's board. Six technicians against a day, with a live marker for the current time, four calls with nobody on them, and the committed hours already at forty four of forty eight.">
+          </a>
+          <div class="body">
+            <h3><a href="work-dispatch.html">The schedule breaks the week the dispatcher takes vacation</a></h3>
+            <p>Which technician is certified on which chiller, which visit can move, which customer will accept whom. None of it is written down.</p>
+            <div class="foot">
+              <span class="chip">Example: Mechanical service company</span>
+              <a class="arrowlink" href="work-dispatch.html">See the concept <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+        </article>
+    <!-- gallery:end -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 8. pricing ===================== -->
+  <section class="section band" id="pricing">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>What a project costs</h2>
+        <p class="sub">How we price, how long it takes, and who you get.</p>
+      </div>
+      <div class="figures">
+        <div>
+          <span class="k">How we price</span>
+          <p class="v num">Fixed price</p>
+          <p>One process, end to end. The price is agreed in writing before anything starts, with the scope written as screens, and it does not move unless you change that scope.</p>
+        </div>
+        <div>
+          <span class="k">Typical length</span>
+          <p class="v num">Weeks</p>
+          <p>From the first call to software running against real data with the people who will use it every day.</p>
+        </div>
+        <div>
+          <span class="k">Who works on it</span>
+          <p class="v num">A dedicated team</p>
+          <p>Designers and engineers assigned to your project, with a named lead who owns delivery and sends you a written update every week.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 9. why waymark lab ===================== -->
+  <section class="section brand on-dark" id="why">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Why companies work with Waymark Lab</h2>
+      </div>
+      <div class="why-grid">
+        <p><b>Built by people who have run these systems.</b> Years spent building business systems for operations, finance and compliance teams, so the first version already understands the work.</p>
+        <p><b>A fixed price, in writing.</b> Scoped as screens, not hours. If the scope changes, the price changes in writing before the work does.</p>
+        <p><b>Working software, not slide decks.</b> You react to your own process on real screens within days, and the finished software lands in weeks.</p>
+        <p><b>Software people actually use.</b> If it is slower than the spreadsheet it replaces, it has failed, so speed is designed in from the first screen.</p>
+        <p><b>You always know where it stands.</b> A named project lead, a written update every week, and working software you can click rather than a progress report.</p>
+        <p><b>You own everything.</b> The code, the data and the documentation, whether or not you ever call us again.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 10. who we work with ===================== -->
+  <section class="section" id="who">
+    <div class="wrap">
+      <div class="two-col">
+        <div>
+          <h2 style="margin-bottom:var(--s3);">Who we work with</h2>
+          <p class="sub" style="margin-bottom:var(--s4);">Private companies where one department runs on a process that outgrew its tools. The industry matters less than the pattern: a deadline, a queue someone works through, and a paper trail that has to hold up.</p>
+        </div>
+        <div>
+          <ul class="who">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5.5 5.5L20 6.5"/></svg><span><b>Construction and trades.</b> Receivable, certificates and waivers, draw packages, dispatch.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5.5 5.5L20 6.5"/></svg><span><b>Distribution and manufacturing.</b> Order entry, inventory reconciliation, quality and corrective action.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5.5 5.5L20 6.5"/></svg><span><b>Logistics and field service.</b> Claims and settlement, scheduling boards, contract response windows.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5.5 5.5L20 6.5"/></svg><span><b>Healthcare administration.</b> Credentialing, payer submission, anything with an expiration date on it.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5.5 5.5L20 6.5"/></svg><span><b>Professional services.</b> Purchase approval, vendor spend, renewals nobody owns.</span></li>
+          </ul>
+          <p class="closing">If nobody is doing the work by hand today, we are the wrong fit and we will say so on the first call.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 12. questions ===================== -->
+  <section class="section" id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Common questions</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Do we have to replace the systems we already use?</summary>
+          <p>No. Most projects connect to your current accounting and operations tools and replace the spreadsheets and manual steps between them.</p>
+        </details>
+        <details>
+          <summary>How soon will we see something working?</summary>
+          <p>You see a working prototype of your own process within days of the first conversation, running against realistic data rather than described in a document. The finished software follows in weeks.</p>
+        </details>
+        <details>
+          <summary>How is a project priced?</summary>
+          <p>One fixed price per project, agreed in writing before building starts. Scope changes are priced in writing before the work changes.</p>
+        </details>
+        <details>
+          <summary>Who owns the software?</summary>
+          <p>You do. The code, the data and the documentation are yours.</p>
+        </details>
+        <details>
+          <summary>How do you handle our data and AI?</summary>
+          <p>Your data stays in the software we build for you. AI features run inside that software, every suggestion shows its basis, and a person approves anything that matters. Hosting and data handling are agreed in writing before any work starts.</p>
+        </details>
+        <details>
+          <summary>What happens after launch?</summary>
+          <p>We support the software and improve it as your process changes. What support covers is agreed in writing with the project, so you know before you commit.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ===================== 13. final call to action ===================== -->
+<section class="cta" id="start">
+  <div class="wrap">
+    <h2>Before you hire another person to do it, talk to us.</h2>
+    <p>Twenty minutes on a call. You will know what we would automate first, what it would cost and how long it would take.</p>
+    <div class="actions">
+      <a class="btn" href="contact.html">Book a free Process Review <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      <a class="arrowlink" href="work.html">See example software <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 14. footer ===================== -->
+<footer class="site-foot">
+  <div class="wrap">
+    <div>
+      <span class="mark">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="3" y="17.4" width="18" height="4.2" rx="1.5"/><rect x="5.9" y="11.5" width="12.8" height="4.1" rx="1.5"/><rect x="8.4" y="5.8" width="8.8" height="3.9" rx="1.4"/></svg><b>Waymark Lab</b>
+      </span>
+      <p class="blurb">Custom business software and AI for growing companies.</p>
+    </div>
+    <div>
+      <p class="foot-h">Solutions</p>
+      <ul>
+        <li><a href="capabilities.html#scheduling">Scheduling and dispatch</a></li>
+        <li><a href="capabilities.html#billing">Billing and invoicing</a></li>
+        <li><a href="capabilities.html#compliance">Compliance tracking</a></li>
+        <li><a href="capabilities.html#inventory">Inventory and purchasing</a></li>
+        <li><a href="capabilities.html#credentialing">Credentialing and records</a></li>
+        <li><a href="capabilities.html#insights">AI process insights</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="foot-h">Company</p>
+      <ul>
+        <li><a href="work.html">Example software</a></li>
+        <li><a href="index.html#how">How it works</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="foot-h">Contact</p>
+      <ul>
+        <li><a href="contact.html">Book a free Process Review</a></li>
+        <li><a href="mailto:info@waymarklab.com">info@waymarklab.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <div class="wrap">
+      <p>&copy; 2026 Waymark Lab. Every screenshot on this site is an illustrative concept using invented sample data. No company shown is a client.</p>
+      <p><a href="privacy.html">Privacy</a></p>
+    </div>
+  </div>
+</footer>
+<script src="js/site.js"></script>
 </body>
 </html>

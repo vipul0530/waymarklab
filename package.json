@@ -1,0 +1,23 @@
+{
+  "name": "waymarklab-site",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Static site for waymarklab.com. No build step. The scripts below only capture screenshots of the mockups.",
+  "scripts": {
+    "serve": "node tools/serve.js",
+    "shots": "node tools/capture.js",
+    "cases": "node tools/build-cases.js",
+    "verify": "node tools/verify.js",
+    "audit": "node tools/audit.js",
+    "links": "node tools/links.js",
+    "copy": "node tools/copyscan.js",
+    "review": "node tools/review.js",
+    "og": "node tools/og.js",
+    "icons": "node tools/icons.js",
+    "smoke": "node tools/smoke.js"
+  },
+  "devDependencies": {
+    "playwright": "^1.48.0",
+    "sharp": "^0.33.5"
+  }
+}

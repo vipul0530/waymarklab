@@ -7,3 +7,14 @@ node_modules/
 # Local Netlify folder
 .netlify
 .netlify
+
+# local review artefacts, not part of the site
+assets/checks/
+
+# never inside the publish directory
+_private/
+mockups/
+
+# my own verification captures, regenerate with npm run review
+assets/review/
+.claude/

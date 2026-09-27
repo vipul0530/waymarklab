@@ -28,26 +28,63 @@
   to     = "/tradingbot/index.html"
   status = 200
 
-# ── Existing site routes ───────────────────────────────────────────────────────
+# ── The archived old site is kept for reference, never served ─────────────────
 [[redirects]]
-  from = "/solutions"
-  to   = "/solutions/index.html"
-  status = 200
+  from   = "/_archive_old_site/*"
+  to     = "/"
+  status = 301
+  force  = true
+
+# ── publish is ".", so these are uploaded. Nothing should be able to fetch them.
+[[redirects]]
+  from   = "/.git/*"
+  to     = "/"
+  status = 404
+  force  = true
 
 [[redirects]]
-  from = "/security"
-  to   = "/security/index.html"
-  status = 200
+  from   = "/node_modules/*"
+  to     = "/"
+  status = 404
+  force  = true
 
 [[redirects]]
-  from = "/about"
-  to   = "/about/index.html"
-  status = 200
+  from   = "/tools/*"
+  to     = "/"
+  status = 404
+  force  = true
 
 [[redirects]]
-  from = "/contact"
-  to   = "/contact/index.html"
-  status = 200
+  from   = "/.claude/*"
+  to     = "/"
+  status = 404
+  force  = true
+
+# ── Old marketing site URLs, sent to the pages that replaced them ─────────────
+[[redirects]]
+  from   = "/solutions"
+  to     = "/work.html"
+  status = 301
+
+[[redirects]]
+  from   = "/research"
+  to     = "/work.html"
+  status = 301
+
+[[redirects]]
+  from   = "/security"
+  to     = "/capabilities.html"
+  status = 301
+
+[[redirects]]
+  from   = "/about"
+  to     = "/about.html"
+  status = 301
+
+[[redirects]]
+  from   = "/contact"
+  to     = "/contact.html"
+  status = 301
 
 [[headers]]
   for = "/*"
